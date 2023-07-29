@@ -1,6 +1,8 @@
 .header {
-    background: #F7EBE5;
-    padding: 12px 15px 15px 15px;
+    &__divider{
+        background: #F7EBE5;
+        padding: 12px 15px 15px 15px;
+    }
     &__top {
         display: flex;
         justify-content: space-between;
@@ -47,9 +49,34 @@
             }
         }
         &_elem {
+            cursor: pointer;
             display: flex;
             align-items: center;
 
+        }
+    }
+
+    &__main {
+        border-bottom: 1px solid black;
+        &_wrapper {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            height: 160px;
+            align-items: center;
+        }
+        &_item {
+            color: #2B1414;
+            font-family: PTSans-Regular;
+            font-size: 17px;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        &_logo {
+            background: url('../../resources/img/header/logo.png') no-repeat 50%/cover;
+            width: 150px;
+            height: 150px;
         }
     }
 }
