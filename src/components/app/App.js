@@ -1,9 +1,11 @@
-import './App.css';
+import React from 'react'
+import './app.scss'
+
 
 function App() {
-  return (
-    <h1>This is our first joint project</h1>
-  );
-}
 
-export default App;
+    return(
+        <div className='App'> Hello</div>
+    )
+}
+export default App
