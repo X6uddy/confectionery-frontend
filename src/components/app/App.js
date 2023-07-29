@@ -1,12 +1,16 @@
-import React from 'react'
-import Header from '../header/header'
-import './app.scss'
+import React from 'react';
+import Footer from '../footer/Footer';
+import Header from '../header/header';
+import './app.scss';
 
 
 function App() {
 
     return(
-        <Header />
+        <>
+        <Header/>
+        <Footer/>
+        </>
     )
 }
 export default App
