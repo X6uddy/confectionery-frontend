@@ -14,23 +14,24 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+            text-decoration: none;
+            cursor: pointer;
+
         }
         &_cityIcon{
-            background: url('../../resources/img/header/city.svg') no-repeat 50%/cover;
             width: 22px;
             height: 22px;
         }
         &_phoneIcon{
-            background: url('../../resources/img/header/phoneicon.svg') no-repeat 50%/cover;
             width: 23px;
             height: 23px;
         }
         &_basketIcon{
-            background: url('../../resources/img/header/basketicon.svg') no-repeat 50%/cover;
             width: 26px;
             height: 26px;
             margin-right: 5px;
-            position: relative; 
+            position: relative;
+            cursor: pointer;
             &-counter {
                 display: flex;
                 justify-content: center;
@@ -49,10 +50,10 @@
             }
         }
         &_elem {
-            cursor: pointer;
             display: flex;
             align-items: center;
-
+            width: 200px;
+            justify-content: center;
         }
     }
 
@@ -66,17 +67,23 @@
             align-items: center;
         }
         &_item {
-            color: #2B1414;
-            font-family: PTSans-Regular;
-            font-size: 17px;
-            font-weight: 500;
-            text-transform: uppercase;
-            cursor: pointer;
+            width: 165px;
+            display: flex;
+            justify-content: center;
+            a {
+                color: #2B1414;
+                font-family: PTSans-Regular;
+                font-size: 17px;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
         }
         &_logo {
-            background: url('../../resources/img/header/logo.png') no-repeat 50%/cover;
-            width: 150px;
-            height: 150px;
+            width: 145px;
+            height: 135px;
+            cursor: pointer;
+            
         }
     }
 }

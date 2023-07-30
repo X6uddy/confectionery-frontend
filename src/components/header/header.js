@@ -1,5 +1,9 @@
-import React from 'react'
-import './header.scss'
+import React from 'react';
+import './header.scss';
+import cityIcon from '../../resources/img/header/city.svg';
+import phoneIcon from '../../resources/img/header/phoneicon.svg';
+import basketIcon from '../../resources/img/header/basketicon.svg';
+import logo from '../../resources/img/header/logo2.png';
 
 
 function Header() {
@@ -10,16 +14,17 @@ function Header() {
                 <div className="container">
                     <div className="header__top">
                         <div className="header__top_elem">
-                            <div className="header__top_cityIcon"></div>
+                            <img className='header__top_cityIcon' src={cityIcon} alt='cityIcon'/>
                             <div className="header__top_tag">Ульяновск</div>
                         </div>
                         <div className="header__top_elem">
-                            <div className="header__top_phoneIcon"></div>
-                            <div className="header__top_tag">8 812 309-82-88</div>
+                            <img className='header__top_phoneIcon' src={phoneIcon} alt='phoneIcon'/>
+                            <a href="tel: +78889993344" className="header__top_tag">8 888 999-33-44</a>
                         </div>
                         <div className="header__top_elem">
                             <div className="header__top_basketIcon">
                                 {/* здесь будет отображаться кол-во товаров в корзине */}
+                                <img className='header__top_basketIcon' src={basketIcon} alt='basketIcon'/>
                                 <div className="header__top_basketIcon-counter">14</div> 
                             </div>
                             <div className="header__top_tag">В корзине (4 товара)</div>
@@ -30,11 +35,11 @@ function Header() {
             <div className="header__main">
                 <div className="container">
                     <div className="header__main_wrapper">
-                            <div className="header__main_item">Доставка и оплата</div>
-                            <div className="header__main_item">Оптовые поставки</div>
-                            <div className="header__main_logo"></div>
-                            <div className="header__main_item">контакты</div>
-                            <div className="header__main_item">каталог товаров</div>
+                            <div className="header__main_item"><a href='#sda'>Доставка и оплата</a></div>
+                            <div className="header__main_item"><a href='#sda'>Оптовые поставки</a></div>
+                            <div className='header__main_item'><img className='header__main_logo' src={logo} alt='logo'/></div>
+                            <div className="header__main_item"><a href='#sda'>контакты</a></div>
+                            <div className="header__main_item"><a href='#sda'>каталог товаров</a></div>
                     </div>
                 </div>
             </div>

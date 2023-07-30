@@ -15,9 +15,9 @@ function Footer() {
                 <div className="footer-block">
                     <div className="footer-list">
                         <h3 className="footer-list__heading">Информация</h3>
-                        <a href='#'>О компании</a>
-                        <a href='#'>Политика</a>
-                        <a href='#'>Контакты</a>
+                        <a href='#sds'>О компании</a>
+                        <a href='#sds'>Политика</a>
+                        <a href='#dsds'>Контакты</a>
                     </div>
                 </div>
 
@@ -40,9 +40,9 @@ function Footer() {
                 <div className="footer-block">
                     <div className="footer-list">
                         <h3 className="footer-list__heading">Каталог</h3>
-                        <a href='#'>Печенька</a>
-                        <a href='#'>Тортик</a>
-                        <a href='#'>Еще че-то</a>
+                        <a href='#sds'>Печенька</a>
+                        <a href='#dsd'>Тортик</a>
+                        <a href='#sd'>Еще че-то</a>
                     </div>
                 </div>
             </div>
