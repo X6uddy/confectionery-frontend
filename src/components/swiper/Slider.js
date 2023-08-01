@@ -24,7 +24,9 @@ import card6 from './img/photo6.jpg';
 const Slider = () => {
     return(
         <Swiper
-            spaceBetween={30}
+            slidesPerView={2}
+            spaceBetween={50}
+            loop={true}
             centeredSlides={true}
             autoplay={{
             delay: 3500,
