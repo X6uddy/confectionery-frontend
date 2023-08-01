@@ -8,7 +8,6 @@ const mapModalSlice = createSlice({
     },
     reducers: {
         openModal(state, action){
-            console.log()
             state.mapModalCondition = true;
         },
         closeModal(state,action){

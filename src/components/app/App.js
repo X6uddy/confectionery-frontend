@@ -16,7 +16,6 @@ const App = () => {
             <Suspense fallback={<Spinner/>}>
                 <Routes>
                     <Route path='/' element={<MainPage/>}/>
-
                     <Route path="*" element={<Page404/>} />
                 </Routes>
             </Suspense>

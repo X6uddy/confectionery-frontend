@@ -1,0 +1,55 @@
+@media (max-width: 920px) {
+    .header {
+        &__main {
+            &_item {
+                width: 125px;
+                text-align: center;
+                & a {
+                    font-size: 18px;
+                }
+            }
+            &_logo {
+                width: 125px;
+                height: 115px;
+            }
+        }
+    }
+}
+@media (max-width:684px) {
+    .header {
+        &__main {
+            display: none;
+        }
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &_wrapper {
+                width: 90px;
+            }
+            &_elem{
+                width: 30px;
+            }
+            &_tag {
+                display: none;
+            }
+            &_cityIcon {
+                width: 30px;
+                height: 30px;
+                margin-left: 3px;
+            }
+            &_phoneIcon {
+                width: 30px;
+                height: 30px;
+            }
+            &_basketIcon {
+                width: 30px;
+                height: 30px;
+                margin: 0;
+            }
+            &_burgerIcon {
+                display: block;
+            }
+        }
+    }
+}
