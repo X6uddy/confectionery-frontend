@@ -1,0 +1,41 @@
+@import '../../style/variables.scss';
+
+.reasons {
+    &__title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 35px;
+        color: grey;
+    }
+    &-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 150px;
+        row-gap: 60px;
+    }
+    &-block {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 10px;
+        justify-items: center;
+        &__wrapper {
+            background-color: $color_header;
+            border-radius: 100%;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            img {
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 75px;
+                height: 75px;
+            }
+        }
+        &__descr {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}

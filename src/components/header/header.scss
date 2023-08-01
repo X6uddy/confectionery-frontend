@@ -1,6 +1,8 @@
+@import '../../style/variables';
+
 .header {
     &__divider{
-        background: #F7EBE5;
+        background: $color_header;
         padding: 12px 15px 15px 15px;
     }
     &__top {

@@ -10,39 +10,41 @@ import './_footer-media.scss';
 function Footer() {
     return (
         <div className='footer'>
-            <div className='footer-wrapper'>
-                
-                <div className="footer-block">
-                    <div className="footer-list">
-                        <h3 className="footer-list__heading">Информация</h3>
-                        <a href='#sds'>О компании</a>
-                        <a href='#sds'>Политика</a>
-                        <a href='#dsds'>Контакты</a>
+            <div className="container">
+                <div className='footer-wrapper'>
+                    
+                    <div className="footer-block">
+                        <div className="footer-list">
+                            <h3 className="footer-list__heading">Информация</h3>
+                            <a href='#sds'>О компании</a>
+                            <a href='#sds'>Политика</a>
+                            <a href='#dsds'>Контакты</a>
+                        </div>
                     </div>
-                </div>
 
-                <div className="footer-block">
-                        <div className='footer-list-section'>
-                            <img src={footer_1} alt="icon1"/>
-                            <div className="footer-list__descr">Готовим с любовью и заботой</div>
-                        </div>
-                        <div className='footer-list-section'>
-                            <img src={footer_2} alt="icon2"/>
-                            <div className="footer-list__descr">Доставка и самовывоз</div>
-                        </div>
-                        <div className='footer-list-section'>
-                            <img src={footer_3} alt="icon3"/>
-                            <div className="footer-list__descr">Натуральные ингредиенты</div>
-                        </div>
-                </div>
-                
+                    <div className="footer-block">
+                            <div className='footer-list-section'>
+                                <img src={footer_1} alt="icon1"/>
+                                <div className="footer-list__descr">Готовим с любовью и заботой</div>
+                            </div>
+                            <div className='footer-list-section'>
+                                <img src={footer_2} alt="icon2"/>
+                                <div className="footer-list__descr">Доставка и самовывоз</div>
+                            </div>
+                            <div className='footer-list-section'>
+                                <img src={footer_3} alt="icon3"/>
+                                <div className="footer-list__descr">Натуральные ингредиенты</div>
+                            </div>
+                    </div>
+                    
 
-                <div className="footer-block">
-                    <div className="footer-list">
-                        <h3 className="footer-list__heading">Каталог</h3>
-                        <a href='#sds'>Печенька</a>
-                        <a href='#dsd'>Тортик</a>
-                        <a href='#sd'>Еще че-то</a>
+                    <div className="footer-block">
+                        <div className="footer-list">
+                            <h3 className="footer-list__heading">Каталог</h3>
+                            <a href='#sds'>Печенька</a>
+                            <a href='#dsd'>Тортик</a>
+                            <a href='#sd'>Еще че-то</a>
+                        </div>
                     </div>
                 </div>
             </div>
