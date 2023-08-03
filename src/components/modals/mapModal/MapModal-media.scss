@@ -1,0 +1,34 @@
+@media (max-width: 872px) {
+    .mapModal {
+        &__window {
+            width:700px;
+            height: 350px;
+            &_infoBlock {
+                height: 290px;
+                &-adress {
+                    font-size: 19px;
+                }
+                &-describe {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .yandexMap {
+        width: 320px;
+        height: 290px;
+    }
+}
+@media (max-width: 695px) {
+    .mapModal {
+        &__window {
+        flex-direction: column;
+        width: 300px;
+        }
+    }
+    .yandexMap {
+        display: none;
+        width: 320px;
+        height: 290px;
+    }
+}   

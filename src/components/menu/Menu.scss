@@ -37,7 +37,9 @@
     &__logo{
         width: 75px;
         height: 75px;
-        align-self: center;
+        &_linkWrapper {
+            align-self: center;
+        }
         }
     &__nav {
         list-style-type: none;
@@ -55,10 +57,15 @@
             color: #000;
             text-decoration: none;
             cursor: pointer;
+            text-transform: uppercase
         };
     }
 }
+//active states
 
+// .active {
+    
+// }
 .menuIsOpen{
     right: 0;
     visibility: visible;

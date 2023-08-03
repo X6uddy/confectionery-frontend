@@ -1,5 +1,6 @@
 import React from "react";
-import './MapModal.scss'
+import './MapModal.scss';
+import './MapModal-media.scss';
 import YandexMap from "./YandexMap";
 import closeIcon from '../../../resources/icons/mapModal/closeIcon.svg';
 import { useDispatch, useSelector } from "react-redux";
@@ -10,7 +11,6 @@ import { closeModal } from "../../../store/mapModalSlice";
 const MapModal = () => {
     const mapModalState = useSelector(state => state.mapModalState.mapModalCondition);
     const dispatch = useDispatch();
-
     return(
         <div 
             onClick={(e) => dispatch(closeModal())}
