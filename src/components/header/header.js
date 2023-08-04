@@ -39,12 +39,12 @@ function Header() {
                                 <a href="tel: +78889993344" className="header__top_tag">8 888 999-33-44</a>
                             </div>
                             <div className="header__top_elem">
-                                <div className="header__top_basketIcon">
+                                <Link to='/basket' className="header__top_basketIcon">
                                     {/* здесь будет отображаться кол-во товаров в корзине */}
                                     <img className='header__top_basketIcon' src={basketIcon} alt='basketIcon'/>
                                     <div className="header__top_basketIcon-counter">24</div> 
-                                </div>
-                                <div className="header__top_tag">В корзине (4 товара)</div>
+                                </Link>
+                                <Link to='/basket' className="header__top_tag">В корзине (4 товара)</Link>
                             </div>
                             </div>
                             <img onClick={() => dispatch(openMenu())} className='header__top_burgerIcon' alt='burgerIcon' src={burgerIcon}/>
@@ -58,7 +58,7 @@ function Header() {
                                 <NavLink to='/wholesale' className="header__main_item">Оптовые поставки</NavLink>
                                 <Link to='/' className='header__main_item'><img className='header__main_logo' src={logo} alt='logo'/></Link>
                                 <NavLink to="/story" className="header__main_item">Наша История</NavLink>
-                                <NavLink to="/catalog" className="header__main_item">каталог товаров</NavLink>
+                                <NavLink to="/catalog" end className="header__main_item">каталог товаров</NavLink>
                         </nav>
                     </div>
                 </div>
