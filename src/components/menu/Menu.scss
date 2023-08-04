@@ -45,6 +45,12 @@
         list-style-type: none;
         padding-right: 50px;
         align-self: center;
+        &_link {
+            text-decoration: none;
+        }
+        &_muffin {
+            display: none;
+        }
         &-item {
             margin-top: 30px;
         }
@@ -55,17 +61,21 @@
             font-weight: 500;
             line-height: normal;
             color: #000;
-            text-decoration: none;
             cursor: pointer;
             text-transform: uppercase
         };
     }
 }
 //active states
-
-// .active {
-    
-// }
+.activeLinkMenu {
+    position: relative;
+    text-decoration: none;
+    img {
+        position: absolute;
+        left: -25px;
+        display: block;
+    }
+}
 .menuIsOpen{
     right: 0;
     visibility: visible;

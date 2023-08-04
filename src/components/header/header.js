@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { openModal } from '../../store/mapModalSlice';
 import Menu from '../menu/Menu';
 import { openMenu } from '../../store/menuSlice';
+import { NavLink, Link } from 'react-router-dom';
 
 
 
@@ -52,13 +53,13 @@ function Header() {
                 </div>
                 <div className="header__main">
                     <div className="container">
-                        <div className="header__main_wrapper">
-                                <div className="header__main_item"><a href='#sda'>Доставка и оплата</a></div>
-                                <div className="header__main_item"><a href='#sda'>Оптовые поставки</a></div>
-                                <div className='header__main_item'><img className='header__main_logo' src={logo} alt='logo'/></div>
-                                <div className="header__main_item"><a href='#sd'>Наша История</a></div>
-                                <div className="header__main_item"><a href='#sda'>каталог товаров</a></div>
-                        </div>
+                        <nav className="header__main_wrapper">
+                                <NavLink to="/deliveryAndPayment" className="header__main_item">Доставка и оплата</NavLink>
+                                <NavLink to='/wholesale' className="header__main_item">Оптовые поставки</NavLink>
+                                <Link to='/' className='header__main_item'><img className='header__main_logo' src={logo} alt='logo'/></Link>
+                                <NavLink to="/story" className="header__main_item">Наша История</NavLink>
+                                <NavLink to="/catalog" className="header__main_item">каталог товаров</NavLink>
+                        </nav>
                     </div>
                 </div>
             </div>
