@@ -1,0 +1,68 @@
+.card {
+    &__wrapper{
+        width: 370px;
+        max-height: 460px;
+        margin: 50px; //временно
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #EDEDF0;
+    }
+    &__img {
+        width: 370px;
+        height: 300px;
+        background-color: black;
+    }
+    &__describe {
+        height: 70px;
+        background-color: #FFFFFF;
+        padding: 15px 0 10px 11px;
+        border-bottom: 1px solid #EDEDF0;
+        &_name {
+            color: #292929;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+    &__footer {
+        background-color: #FFFFFF;
+        height: 50px;
+        display: flex;
+        &_price {
+            display: flex;
+            margin-left: 21px;
+            margin-top: 13px;
+            color: #984b46;
+            border-right: 1px solid #EDEDF0;
+            width: 220px;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal
+        }
+        &_basket{
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 150px;
+            &-icon {
+                position: absolute;
+                margin-left: 23px;
+                cursor: pointer;
+            }
+            &-title {
+                cursor: pointer;
+                margin-left: 45px;
+                color: rgba(0, 0, 0, 0.88);
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+    }
+}

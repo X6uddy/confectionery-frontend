@@ -1,5 +1,6 @@
 import React from "react";
 import './CatalogPage.scss'
+import ProductCard from "./productCard/ProductCard";
 
 
 const CatalogPage = () => {
@@ -15,7 +16,9 @@ const CatalogPage = () => {
                     <div className="catalog__filter_item"><span>Торты</span></div>
                 </div>
                 <div className="catalog__products-wrapper">
-                    <div className="catalog__products_item">item</div>
+                    <div className="catalog__products_item">
+                        <ProductCard />
+                    </div>
                 </div>
                 <button className="catalog__btn">Показать ещё</button>
             </div>  
