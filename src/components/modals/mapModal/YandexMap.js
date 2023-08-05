@@ -5,7 +5,12 @@ import React from 'react';
 const YandexMap = () => {
   return (
     <div className='yandexMap'>
-        <YMaps>
+        <YMaps
+          enterprise
+          query={{
+            apikey: '86e0b3d2-fa19-4ce1-9877-378d5d8c2e12',
+          }}
+        >
         <Map
           defaultState={{
             center: [54.344423, 48.593629],

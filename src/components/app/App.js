@@ -7,7 +7,7 @@ import StoryPage from '../pages/storyPage/StoryPage';
 import WholesalePage from '../pages/wholesalePage/WholesalePage';
 import DeliveryAndPaymentPage from '../pages/deliveryAndPaymentPage/DeliveryAndPaymentPage';
 import CatalogPage from '../pages/catalogPage/CatalogPage';
-import SingleProductPage from '../pages/catalogPage/singleProductPage/SingleProductPage';
+import SingleProductPage from '../pages/singleProductPage/SingleProductPage';
 import BasketPage from '../pages/basketPage/BasketPage'
 
 
