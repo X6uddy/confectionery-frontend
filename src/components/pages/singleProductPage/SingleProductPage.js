@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const SingleProductPage = () => {
 
-    const {productId} = useParams()
+    const {productId} = useParams();
 
     return(
         <h1>

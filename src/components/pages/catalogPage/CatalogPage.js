@@ -1,6 +1,6 @@
 import React from "react";
 import './CatalogPage.scss'
-import ProductCard from "./productCard/ProductCard";
+import ProductCard from "../../productCard/ProductCard";
 
 
 const CatalogPage = () => {
