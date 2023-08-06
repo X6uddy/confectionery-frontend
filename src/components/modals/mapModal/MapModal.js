@@ -8,6 +8,8 @@ import { closeModal } from "../../../store/mapModalSlice";
 
 
 
+
+
 const MapModal = () => {
     const mapModalState = useSelector(state => state.mapModalState.mapModalCondition);
     const dispatch = useDispatch();

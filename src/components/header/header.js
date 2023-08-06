@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.scss';
+import './Header.scss';
 import './Header-media.scss';
 import cityIcon from '../../resources/icons/header/city.svg';
 import phoneIcon from '../../resources/icons/header/phoneicon.svg';
@@ -12,6 +12,7 @@ import { openModal } from '../../store/mapModalSlice';
 import Menu from '../menu/Menu';
 import { openMenu } from '../../store/menuSlice';
 import { NavLink, Link } from 'react-router-dom';
+
 
 
 
