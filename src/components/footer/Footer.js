@@ -4,8 +4,8 @@ import footer_1 from '../../resources/icons/footer/footer_1.svg';
 import footer_2 from '../../resources/icons/footer/footer_2.svg';
 import footer_3 from '../../resources/icons/footer/footer_3.svg';
 
-import './_footer.scss';
-import './_footer-media.scss';
+import './footer.scss';
+import './footer-media.scss';
 
 function Footer() {
     return (
