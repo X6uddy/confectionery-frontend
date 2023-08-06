@@ -1,5 +1,6 @@
 import React from "react";
-import './WholesalePage.scss'
+
+import './WholesalePage.scss';
 
 
 const WholesalePage = () => {

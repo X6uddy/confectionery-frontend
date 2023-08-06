@@ -1,7 +1,9 @@
 import React from "react";
-import './CatalogPage.scss'
+
 import ProductCard from "../../productCard/ProductCard";
 import { useGetProductsQuery } from "../../../store/productsApiSlice";
+
+import './CatalogPage.scss'
 
 
 const CatalogPage = () => {

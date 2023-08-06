@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import { React } from 'react';
-import './Menu.scss';
+import {Link, NavLink} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { closeMenu } from '../../store/menuSlice';
 import logo from '../../resources/icons/header/logo2.png';
 import closeIcon from '../../resources/icons/header/closeIcon.svg';
-import {Link, NavLink} from 'react-router-dom';
 import muffinIcon from '../../resources/icons/menu/muffinicon.svg';
+
+import './Menu.scss';
 
 
 const Menu = () => {

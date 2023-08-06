@@ -39,15 +39,15 @@
 
 @media (max-width: 576px) {
     .footer {
-        right: 0;
+        // right: 0;
         &-wrapper {
             width: 400px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: 
-            "c b "
-            "a b";
-            transform: translateX(50%);
+            "b b"
+            "c a";
+            margin: 0 auto;
         }
         &-block {
             &:nth-child(1) {
@@ -55,8 +55,20 @@
             }
             &:nth-child(2) {
                 display: flex;
-                flex-direction: column;
                 margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .footer {
+        &-block {
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+            &:nth-child(2) {
+                display: none;
             }
         }
     }
