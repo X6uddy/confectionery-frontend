@@ -1,8 +1,6 @@
 import React from "react";
-import './productCard.scss';
-import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
-
-
+import './ProductCard.scss';
+import cardBasket from '../../../../resources/icons/productCard/cardbasket.svg';
 const ProductCard = () => {
     return(
         <>
