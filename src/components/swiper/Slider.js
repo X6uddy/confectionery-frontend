@@ -6,7 +6,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import './slider.scss';
+import './_slider.scss';
+import './_slider_media.scss'
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -56,25 +57,25 @@ const Slider = () => {
                 <SwiperSlide>
                     <Link to={`/catalog/${62}`}>
                         <img className="slider__photo" alt="sliderPhoto"  src={photo62}/>
-                        <div className="slider__descr">Кекс "Творожный с изюмом"</div>
+                        <div className="slider__descr">"Творожный с изюмом"</div>
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Link to={`/catalog/${73}`}>
                         <img className="slider__photo" alt="sliderPhoto"  src={photo73}/>
-                        <div className="slider__descr">Печенье сдобное "Язык с сахаром"</div>
+                        <div className="slider__descr">"Язык с сахаром"</div>
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Link to={`/catalog/${300}`}>
                         <img className="slider__photo" alt="sliderPhoto"  src={photo300}/>
-                        <div className="slider__descr">Пирожное "Безе воздушное"</div>
+                        <div className="slider__descr">"Безе воздушное"</div>
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Link to={`/catalog/${127}`}>
                         <img className="slider__photo" alt="sliderPhoto"  src={photo127}/>
-                        <div className="slider__descr">Печенье сдобное "Рогалик с варёной сгущенкой"</div>
+                        <div className="slider__descr">"Рогалик с варёной сгущенкой"</div>
                     </Link>
                 </SwiperSlide>
             </Swiper>
