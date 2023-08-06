@@ -6,6 +6,7 @@ import reasons5 from '../../resources/icons/reasons/technologies.png';
 import reasons6 from '../../resources/icons/reasons/ingredients.png';
 
 import './reasons.scss';
+import './reasons-media.scss';
 const Reasons = () => {
     return (
         <div className="reasons">
