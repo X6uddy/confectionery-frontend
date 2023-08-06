@@ -6,6 +6,7 @@ const YandexMap = () => {
   return (
     <div className='yandexMap'>
         <YMaps
+          onload={(e) => console.log(e)}
           enterprise
           query={{
             apikey: '86e0b3d2-fa19-4ce1-9877-378d5d8c2e12',
@@ -21,23 +22,8 @@ const YandexMap = () => {
           <Placemark geometry={[54.345170, 48.594249]} />
         </Map>
       </YMaps>
-    </div>
+      </div>
   );
 };
 
-
-// const YandexMap = () =>
-//   (
-//     <YMaps>
-//             <Map
-//               defaultState={{
-//                 center: [54.344423, 48.593629],
-//                 zoom: 16,
-//               }}
-//               style={mapStyle}
-//             >
-//               <Placemark geometry={[54.345170, 48.594249]} />
-//             </Map>
-//     </YMaps>
-//   );
 export default YandexMap

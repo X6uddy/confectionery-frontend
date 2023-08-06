@@ -1,9 +1,16 @@
 import React from "react";
 import './CatalogPage.scss'
 import ProductCard from "../../productCard/ProductCard";
+import { useGetProductsQuery } from "../../../store/productsApiSlice";
 
 
 const CatalogPage = () => {
+    const {data = [], isLoading, error} = useGetProductsQuery()
+
+    if(isLoading){
+        console.log('Loading')
+    }
+
 
     return(
         <div className="catalog">
