@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.scss';
+import './header.scss';
 import './Header-media.scss';
 import cityIcon from '../../resources/icons/header/city.svg';
 import phoneIcon from '../../resources/icons/header/phoneicon.svg';
