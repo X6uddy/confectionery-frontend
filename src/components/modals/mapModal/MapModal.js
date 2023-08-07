@@ -1,10 +1,12 @@
 import React from "react";
-import './MapModal.scss';
-import './MapModal-media.scss';
+import { useDispatch, useSelector } from "react-redux";
+
 import YandexMap from "./YandexMap";
 import closeIcon from '../../../resources/icons/mapModal/closeIcon.svg';
-import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../../../store/mapModalSlice";
+
+import './MapModal.scss';
+import './MapModal-media.scss';
 
 
 

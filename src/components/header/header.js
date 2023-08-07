@@ -1,17 +1,19 @@
 import React from 'react';
-import './Header.scss';
-import './Header-media.scss';
+import { NavLink, Link } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+
 import cityIcon from '../../resources/icons/header/city.svg';
 import phoneIcon from '../../resources/icons/header/phoneicon.svg';
 import basketIcon from '../../resources/icons/header/basketicon.svg';
 import burgerIcon from '../../resources/icons/header/burgericon.svg'
 import logo from '../../resources/icons/header/logo2.png';
 import MapModal from '../modals/mapModal/MapModal';
-import { useDispatch } from "react-redux";
 import { openModal } from '../../store/mapModalSlice';
 import Menu from '../menu/Menu';
 import { openMenu } from '../../store/menuSlice';
-import { NavLink, Link } from 'react-router-dom';
+
+import './Header.scss';
+import './Header-media.scss';
 
 
 

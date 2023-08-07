@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -8,9 +9,6 @@ import 'swiper/css/navigation';
 
 import './slider.scss';
 import './slider_media.scss'
-
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import photo233 from './img/233.jpg';
 import photo77 from './img/77.jpg';
@@ -38,7 +36,7 @@ const Slider = () => {
                 pagination={{
                 clickable: true,
                 }}
-                navigation={true}
+                navigation={false}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >

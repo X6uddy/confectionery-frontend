@@ -1,10 +1,12 @@
 import React from "react";
-import './CatalogPage.scss'
+
 import ProductCard from "../../productCard/ProductCard";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { loadNextProducts, fetchProducts} from "../../../store/catalogSlice";
 import { useGetSumProductsQuery } from "../../../store/productsApiSlice";
+
+import './CatalogPage.scss'
 
 
 const CatalogPage = () => {

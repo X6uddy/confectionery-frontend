@@ -1,9 +1,10 @@
 import React from "react";
 import { Outlet } from 'react-router-dom';
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
 import { Suspense } from 'react';
+
 import Spinner from "../spinner/Spinner";
+import Header from "../header/header";
+import Footer from "../footer/Footer";
 
 const Dashboard = () => {
     return (

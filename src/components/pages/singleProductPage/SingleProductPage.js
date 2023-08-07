@@ -1,6 +1,7 @@
 import React from "react";
-import './SingleProductPage.scss'
 import { useParams } from "react-router-dom";
+
+import './SingleProductPage.scss';
 
 
 const SingleProductPage = () => {
