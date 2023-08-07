@@ -39,9 +39,13 @@
         &-wrapper{
             margin-top: 50px;
             display: flex;
-            height: 950px;
+            flex-wrap: wrap;
+            height: 100%;
             width: 100%;
-            border: 1px solid black;
+            justify-content: space-around;
+        }
+        &_item {
+            margin-bottom: 40px;
 
         }
     }

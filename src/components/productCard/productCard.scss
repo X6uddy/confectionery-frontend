@@ -1,15 +1,17 @@
 .card {
     &__wrapper{
-        width: 370px;
-        max-height: 460px;
-        margin: 50px; //временно
+        width: 350px;
+        max-height: 450px;
         border-radius: 5px;
         overflow: hidden;
         border: 1px solid #EDEDF0;
+        border: 1px solid #984b46;
     }
     &__img {
-        width: 370px;
+        width: 350px;
         height: 300px;
+        object-fit: cover;
+        cursor: pointer;
     }
     &__describe {
         height: 70px;
@@ -23,6 +25,10 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            cursor: pointer;
+            &:hover {
+                color: green
+            }
         }
     }
     &__footer {

@@ -6,7 +6,6 @@ const YandexMap = () => {
   return (
     <div className='yandexMap'>
         <YMaps
-          onload={(e) => console.log(e)}
           enterprise
           query={{
             apikey: '86e0b3d2-fa19-4ce1-9877-378d5d8c2e12',

@@ -1,17 +1,25 @@
 import React from "react";
 import './CatalogPage.scss'
 import ProductCard from "../../productCard/ProductCard";
-import { useGetProductsQuery } from "../../../store/productsApiSlice";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { loadNextProducts, fetchProducts} from "../../../store/catalogSlice";
+import { useGetSumProductsQuery } from "../../../store/productsApiSlice";
 
 
 const CatalogPage = () => {
-    const {data = [], isLoading, error} = useGetProductsQuery()
+    
+    const dispatch = useDispatch()
+    const catalogStates = useSelector(state => state.catalogStates);
+    const {data} = useGetSumProductsQuery();
+    useEffect(() => {   
+            if(catalogStates.skip === 0) {
+                dispatch(fetchProducts(catalogStates.skip))
+                dispatch(loadNextProducts())
+            }
+    },[catalogStates.skip,dispatch])
 
-    if(isLoading){
-        console.log('Loading')
-    }
-
-
+    
     return(
         <div className="catalog">
             <div className="container">
@@ -23,11 +31,18 @@ const CatalogPage = () => {
                     <div className="catalog__filter_item"><span>Торты</span></div>
                 </div>
                 <div className="catalog__products-wrapper">
-                    <div className="catalog__products_item">
-                        <ProductCard />
-                    </div>
+                        {catalogStates.data.map((product) => {
+                            return (
+                                <div key={product._id} className="catalog__products_item">
+                                    <ProductCard product={product} />
+                                </div>
+                            )
+                        })} 
                 </div>
-                <button className="catalog__btn">Показать ещё</button>
+                {!(catalogStates.skip >= data) ? <button className="catalog__btn" onClick={() => {
+                    dispatch(loadNextProducts())
+                    dispatch(fetchProducts(catalogStates.skip))
+                    }}>Показать ещё</button>: ''}
             </div>  
         </div>
     )
