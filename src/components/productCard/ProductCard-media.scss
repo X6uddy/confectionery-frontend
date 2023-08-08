@@ -1,0 +1,11 @@
+@media (max-width: 370px) {
+    .card {
+        &__wrapper {
+            width: 310px;
+        }
+        &__img {
+            width: 310px;
+            height: 260px;
+        }
+    }
+}

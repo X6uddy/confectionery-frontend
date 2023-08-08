@@ -1,5 +1,6 @@
 import React from "react";
 import './ProductCard.scss';
+import './ProductCard-media.scss';
 import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
 import { Link } from "react-router-dom";
 

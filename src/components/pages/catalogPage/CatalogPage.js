@@ -1,26 +1,48 @@
-import React from "react";
-
+import React, { useState, useEffect  } from "react";
 import ProductCard from "../../productCard/ProductCard";
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { loadNextProducts, fetchProducts, fetchSumProducts} from "../../../store/catalogSlice";
 import Spinner from '../../spinner/Spinner';
 import error503 from '../../../resources/img/catalogPage/error503.jpg';
+import arrowUp from '../../../resources/icons/catalogPage/arrowup.svg';
 
 import './CatalogPage.scss'
+import './CatalogPage-media.scss'
 
 
 const CatalogPage = () => {
     
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const {dataCatalog, skip, catalogError,isLoading, sumOfProducts} = useSelector(state => state.catalogStates);
-    useEffect(() => {   
-            if(skip === 0) {
-                dispatch(fetchProducts(skip))
-                dispatch(loadNextProducts())
-                dispatch(fetchSumProducts())
+    const [arrowVisable, setArrowVisable] = useState(false);
+
+
+
+    useEffect(() => {
+        const arrowScroll = () =>{
+            if(window.scrollY >= 800){
+                setArrowVisable(true)
+            }else{
+                setArrowVisable(false)
             }
+        }
+        window.addEventListener('scroll', arrowScroll)
+        if(skip === 0) {
+            dispatch(fetchProducts(skip))
+            dispatch(loadNextProducts())
+            dispatch(fetchSumProducts())
+        }
+
+        return () => {
+            window.removeEventListener('scroll', arrowScroll);
+        }
+
     },[skip,dispatch])
+
+    const scrollToTop = () => {
+        const anchorArrow = document.getElementById('header');
+        anchorArrow.scrollIntoView({behavior : 'smooth'})
+    }
 
     
     return(
@@ -34,6 +56,16 @@ const CatalogPage = () => {
                     <div className="catalog__filter_item"><span>Торты</span></div>
                 </div>
                 <div className="catalog__products-wrapper">
+                     <img
+                        alt="arrowUp" 
+                        onClick={scrollToTop} style={
+                        {
+                            visibility: arrowVisable ? 'visible': 'hidden'
+                        }
+                        } 
+                        src={arrowUp} 
+                        className="catalog__arrowUp" 
+                    />
                     {catalogError ? <img alt="error503" style={{width: '80%'}} src={error503} /> : ''}
                     {isLoading ? <Spinner /> : ''}
                         {dataCatalog.map((product) => {
