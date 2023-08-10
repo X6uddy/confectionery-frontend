@@ -3,6 +3,7 @@ import mapModalReduser from './mapModalSlice';
 import menuReduser from './menuSlice';
 import { productsApiSlice } from './productsApiSlice';
 import CatalogSlice from './catalogSlice';
+import basketSlice from './basketSlice';
 
 
 const store = configureStore({
@@ -11,6 +12,7 @@ const store = configureStore({
     menuState: menuReduser,
     productsApi: productsApiSlice.reducer,
     catalogStates: CatalogSlice,
+    basketStates: basketSlice,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApiSlice.middleware) 
 })

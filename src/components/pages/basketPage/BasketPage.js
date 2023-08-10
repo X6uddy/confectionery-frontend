@@ -2,9 +2,12 @@ import React, { useState } from "react";
 
 import './BasketPage.scss';
 import BasketCard from "../../basketCard/BasketCard";
+import { useSelector } from "react-redux";
 
 
 const BasketPage = () => {
+    const {basketItems, totalQuantity, totalAmount} = useSelector(state => state.basketStates);
+
 
     const [byersName,setBuyersName] = useState('');
     const [buyersNumber,setBuyersNumber] = useState('');
@@ -15,13 +18,13 @@ const BasketPage = () => {
         <div className="basketPage">
             <div className="container">
                 <div className="basketPage__title">Корзина</div>
-                <div className="basketPage__describe">3 товара/1030руб.</div>
+                <div className="basketPage__describe">{totalQuantity} товара/{totalAmount}руб.</div>
                 <div className="basketPage-wrapper">
                     <div className="basketPage__mainContent">
                         <div className="basketPage__mainContent_itemsList">
-                            <BasketCard />
-                            <BasketCard />
-                            <BasketCard />
+                            {basketItems.map((item) => (
+                                    <BasketCard key={item.productID} basketItem={item} />
+                            ))}
                         </div>
                         <div className="basketPage__mainContent_makeOrder">
                             <div className="basketPage__title">Оформить заказ</div>
@@ -66,7 +69,7 @@ const BasketPage = () => {
                                 Итоговая сумма заказа:
                                 </div>
                                 <div className="basketPage__mainContent_orderSum-price">
-                                    1440руб
+                                {totalAmount} руб
                                 </div>
                             </div>
                             <button className="basketPage__btn basketPage__btn_mainContent">Оформить заказ</button>
@@ -78,12 +81,12 @@ const BasketPage = () => {
                             <div className="basketPage__infoWindow_fullPrice">
                                 <div className="basketPage__infoWindow_fullPrice-tag">Стоимость товаров</div>
                                 <div className="basketPage__infoWindow_fullPrice-divider"></div>
-                                <div className="basketPage__infoWindow_fullPrice-price">700 руб</div>
+                                <div className="basketPage__infoWindow_fullPrice-price">{totalAmount} руб</div>
                             </div>
                         </div>
                         <div className="basketPage__infoWindow-bottom">
                             <div className="basketPage__infoWindow_forPay">К оплате</div>
-                            <div className="basketPage__infoWindow_sum">1100 руб</div>
+                            <div className="basketPage__infoWindow_sum">{totalAmount} руб</div>
                         </div>
                         <div className="basketPage__btn-wrapper">
                             <button className="basketPage__btn">Оформить заказ</button>

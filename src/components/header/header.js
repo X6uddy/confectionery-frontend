@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useDispatch } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
 import cityIcon from '../../resources/icons/header/city.svg';
 import phoneIcon from '../../resources/icons/header/phoneicon.svg';
 import basketIcon from '../../resources/icons/header/basketicon.svg';
@@ -20,8 +19,11 @@ import './Header-media.scss';
 
 function Header() {
     const dispatch = useDispatch();
+    const {totalQuantity} = useSelector(state => state.basketStates);
 
-
+    function typeOfWords(int, array) {
+        return (array = array || ['товар', 'товара', 'товаров']) && array[(int % 100 > 4 && int % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(int % 10 < 5) ? int % 10 : 5]];
+    }
     return(
         <>
             <div className="header" id='header'>
@@ -35,7 +37,6 @@ function Header() {
                                 <div className="header__top_tag" onClick={() => dispatch(openModal())}>Ульяновск..</div>
                             </div>
                             <div className="header__top_elem">
-                                {/* <img className='header__top_phoneIcon' src={phoneIcon} alt='phoneIcon'/> */}
                                 <a href="tel: +78889993344" className="header__top_phoneIcon">
                                     <img className='header__top_phoneIcon' src={phoneIcon} alt='phoneIcon'/>
                                 </a>
@@ -43,11 +44,10 @@ function Header() {
                             </div>
                             <div className="header__top_elem">
                                 <Link to='/basket' className="header__top_basketIcon">
-                                    {/* здесь будет отображаться кол-во товаров в корзине */}
                                     <img className='header__top_basketIcon' src={basketIcon} alt='basketIcon'/>
-                                    <div className="header__top_basketIcon-counter">24</div> 
+                                    <div className="header__top_basketIcon-counter">{totalQuantity}</div> 
                                 </Link>
-                                <Link to='/basket' className="header__top_tag">В корзине (4 товара)</Link>
+                                <Link to='/basket' className="header__top_tag">В корзине ({totalQuantity} {typeOfWords(totalQuantity)})</Link>
                             </div>
                             </div>
                             <img onClick={() => dispatch(openMenu())} className='header__top_burgerIcon' alt='burgerIcon' src={burgerIcon}/>
@@ -68,6 +68,6 @@ function Header() {
             </div>
             <MapModal />
         </>
-    )
+        )
 }
 export default Header
