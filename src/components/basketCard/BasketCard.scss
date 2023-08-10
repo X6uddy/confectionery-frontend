@@ -5,11 +5,19 @@
     justify-content: flex-start;
     background-color: #FFF;
     padding: 15px 17px;
+    position: relative;
     &__img {
         width: 80px;
         height: 80px;
         object-fit: cover;
         background-color: #000;
+    }
+    &__remove {
+        position: absolute;
+        z-index: 10;
+        right: 7px;
+        top: 7px;
+        cursor: pointer;
     }
     &__infoBlock{
         width: 100%;
@@ -74,6 +82,21 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+                input[type=number]::-webkit-inner-spin-button, 
+                input[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+                margin: 0;
+                }
+                input {
+                    width: 30px;
+                    font-family: PTSans-Regular;
+                    height: 20px;
+                    border: 1px solid #EDEDF0;
+                    border-radius: 5px;
+                    text-align: center;
+                    outline: none !important
+                }
+                
             }
         }
         &_price {

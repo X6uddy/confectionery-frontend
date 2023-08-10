@@ -106,12 +106,19 @@
         &_fullPrice {
             display: flex;
             margin-top: 10px;
+            position: relative;
+            justify-content: space-between;
             &-divider {
                 width: 100%;
                 border-bottom: 1px solid #EDEDF0;
+                position: absolute;
+                top: 16px;
+                z-index: 1;
             }
             &-tag {
-                width: 245px;
+                z-index: 2;
+                background-color: #fff;
+                width: 132px;
                 color: #292929;
                 font-family: PTSans-Regular;
                 font-size: 16px;
@@ -120,7 +127,10 @@
                 opacity: 0.8;
             }
             &-price {
-                width: 100px;
+                align-self: flex-end;
+                z-index: 2;
+                background-color: #fff;
+                min-width: 30px;
                 color: #292929;
                 font-family: PTSans-Regular;
                 font-size: 16px;

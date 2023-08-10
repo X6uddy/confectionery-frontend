@@ -39,11 +39,13 @@ const basketSlice = createSlice({
                     price: newItem.price,
                     photoPath: newItem.photoPath,
                     productID: newItem.productID,
+                    priceForOne: newItem.price,
                     quantity: 1,
                     totalPrice: newItem.price, //price will increase depend on item quantity
                 });
             }else{
                 existingItem.quantity++;
+                existingItem.totalPrice = Number(existingItem.quantity) * Number(newItem.price);
             }
 
             state.totalQuantity = state.basketItems.reduce(
@@ -52,7 +54,7 @@ const basketSlice = createSlice({
               );
 
             state.totalAmount = state.basketItems.reduce(
-                (total, item) => total + Number(item.price) * Number(item.quantity),
+                (total, item) => total + Number(item.priceForOne) *  Number(item.quantity),
                 0
             );
 
@@ -73,19 +75,77 @@ const basketSlice = createSlice({
                 state.basketItems = state.basketItems.filter((item) => item.productID !== productID);
             }else {
                 existingItem.quantity--;
-                existingItem.totalPrice =
-                  Number(existingItem.totalPrice) - Number(existingItem.price);
+                existingItem.totalPrice = Number(existingItem.totalPrice) - Number(existingItem.priceForOne) ;
             }
 
             state.totalAmount = state.basketItems.reduce(
-                (total, item) => total + Number(item.price) * Number(item.quantity),
+                (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
                 0
             );
 
             state.totalQuantity = state.basketItems.reduce(
                 (total, item) => total + Number(item.quantity),
                 0
-              );
+            );
+
+            setItemFunc(
+                state.basketItems.map((item) => item),
+                state.totalAmount,
+                state.totalQuantity
+            );
+        },
+        deleteItem(state, action) {
+
+            const productID = action.payload;
+            const existingItem = state.basketItems.find((item) => item.productID === productID);
+
+            if(existingItem){
+                state.basketItems = state.basketItems.filter((item) => item.productID !== productID);
+            }
+            
+            state.totalAmount = state.basketItems.reduce(
+                (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
+                0
+            );
+
+            state.totalQuantity = state.basketItems.reduce(
+                (total, item) => total + Number(item.quantity),
+                0
+            );
+
+            setItemFunc(
+                state.basketItems.map((item) => item),
+                state.totalAmount,
+                state.totalQuantity
+            );
+        },
+        setInputState(state,action) {
+            const quantityInput = action.payload.quantitySum;
+            const productID = action.payload.id;
+            const existingItem = state.basketItems.find((item) => item.productID === productID);
+            
+            if(existingItem){
+                if(Number(quantityInput) === 0 || Number(quantityInput) < 0 || quantityInput === ''){
+                    state.basketItems = state.basketItems.filter((item) => item.productID !== productID);
+                }
+                else{
+                    existingItem.quantity = Number(quantityInput);
+                    existingItem.totalPrice = Number(quantityInput) * Number(existingItem.price);
+                }
+                
+            }
+
+
+            state.totalAmount = state.basketItems.reduce(
+                (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
+                0
+            );
+
+            state.totalQuantity = state.basketItems.reduce(
+                (total, item) => total + Number(item.quantity),
+                0
+            );
+            
 
             setItemFunc(
                 state.basketItems.map((item) => item),
@@ -95,5 +155,5 @@ const basketSlice = createSlice({
         }
     },
 });
-export const {addItem, removeItem} = basketSlice.actions;
+export const {addItem, removeItem, deleteItem, setInputState} = basketSlice.actions;
 export default basketSlice.reducer;

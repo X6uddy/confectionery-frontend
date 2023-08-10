@@ -13,12 +13,15 @@ const BasketPage = () => {
     const [buyersNumber,setBuyersNumber] = useState('');
     const [buyersComment,setBuyersComment] = useState('');
 
+    function typeOfWords(int, array) {
+        return (array = array || ['товар', 'товара', 'товаров']) && array[(int % 100 > 4 && int % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(int % 10 < 5) ? int % 10 : 5]];
+    }
 
     return(
         <div className="basketPage">
             <div className="container">
                 <div className="basketPage__title">Корзина</div>
-                <div className="basketPage__describe">{totalQuantity} товара/{totalAmount}руб.</div>
+                <div className="basketPage__describe">{totalQuantity} {typeOfWords(totalQuantity)} / {totalAmount} руб.</div>
                 <div className="basketPage-wrapper">
                     <div className="basketPage__mainContent">
                         <div className="basketPage__mainContent_itemsList">
