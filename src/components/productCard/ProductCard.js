@@ -1,15 +1,22 @@
 import React from "react";
 import './ProductCard.scss';
+import './ProductCard-media.scss';
 import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
+import { Link } from "react-router-dom";
+
+
+
 const ProductCard = ({product}) => {
     const {photoPath,productID,title, price} = product 
 
     return(
         <>
             <div className="card__wrapper">
-                <img src={`http://127.0.0.1:3004${photoPath}`} alt={`img number-${productID}`} className="card__img" />
+                <Link to={productID}>
+                    <img src={`http://127.0.0.1:3004${photoPath}`} alt={`img number-${productID}`} className="card__img" />
+                </Link>
                 <div className="card__describe">
-                    <div    className="card__describe_name">{title}</div>
+                    <Link to={productID} className="card__describe_name">{title}</Link>
                 </div>
                 <div className="card__footer">
                     <div className="card__footer_price">{price}</div>

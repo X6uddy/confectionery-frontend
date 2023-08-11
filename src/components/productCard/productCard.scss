@@ -25,6 +25,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            text-decoration: none;
             cursor: pointer;
             &:hover {
                 color: green
@@ -36,6 +37,7 @@
         height: 50px;
         display: flex;
         &_price {
+            cursor:default;
             display: flex;
             margin-left: 21px;
             margin-top: 13px;

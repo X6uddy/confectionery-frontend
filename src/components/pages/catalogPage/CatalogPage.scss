@@ -10,10 +10,19 @@
         font-weight: 600;
         line-height: normal;
     }
+    &__arrowUp {
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
     &__filter {
+        width: 100%;
         &-wrapper {
             display: flex;
             margin-top: 40px;
+            padding: 0 40px;
         }
         &_item {
             cursor: pointer;
@@ -37,6 +46,7 @@
     }
     &__products {
         &-wrapper{
+            padding: 0 40px ;
             margin-top: 50px;
             display: flex;
             flex-wrap: wrap;
@@ -45,7 +55,7 @@
             justify-content: space-around;
         }
         &_item {
-            margin-bottom: 40px;
+            margin-bottom: 25px;
 
         }
     }

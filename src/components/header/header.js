@@ -24,7 +24,7 @@ function Header() {
 
     return(
         <>
-            <div className="header">
+            <div className="header" id='header'>
             <Menu />
                 <div className="header__divider">
                     <div className="container">

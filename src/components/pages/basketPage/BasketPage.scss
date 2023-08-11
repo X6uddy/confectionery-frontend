@@ -1,0 +1,125 @@
+.basketPage {
+    background-color: #F7F7F7;
+    padding: 35px 0 50px 0;
+    &__title {
+        color: #292929 ;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__totalOrder {
+        color: #292929;
+        text-align: center;
+        font-family: PTSans-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 35px;
+    }
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__itemsList{
+        width: 670px;
+        height: 100%; //временно
+        border: 1px solid #EDEDF0;
+        border-bottom: none;
+        border-radius: 5px;
+        background-color: #fff;// temporary
+        overflow: hidden;
+    }
+    &__infoWindow{
+        width: 470px;
+        border: 1px solid #EDEDF0;
+        border-radius: 5px;
+        background-color: #fff;
+        &-top {
+            border-bottom: 1px solid #EDEDF0;
+            padding: 30px 20px;
+        }
+        &_title {
+            color: #292929;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        &_fullPrice {
+            display: flex;
+            margin-top: 10px;
+            &-divider {
+                width: 100%;
+                border-bottom: 1px solid #EDEDF0;
+            }
+            &-tag {
+                width: 245px;
+                color: #292929;
+                font-family: PTSans-Regular;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                opacity: 0.8;
+            }
+            &-price {
+                width: 100px;
+                color: #292929;
+                font-family: PTSans-Regular;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                opacity: 0.8;
+            }
+        }
+        &-bottom {
+            padding: 20px 20px;
+            border-bottom: 1px solid #EDEDF0;
+            display: flex;
+            justify-content: space-between;
+        }
+        &_forPay{
+            color: #292929;
+            font-family: PTSans-Regular;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+        &_sum {
+            color: #292929;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        &_btn {
+            display: block;
+            width: 250px;
+            height: 50px;
+            background-color: #E7426A;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            cursor: pointer;
+            &:active {
+                opacity: 0.8;
+            }
+            &-wrapper{
+                padding: 30px 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
