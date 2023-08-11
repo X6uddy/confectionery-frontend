@@ -1,0 +1,27 @@
+@media (max-width: 1200px) {
+.single {
+    &-product {
+        grid-template-columns: 400px 300px;
+    }
+}
+}
+
+@media (max-width: 768px) {
+    .single {
+        &-product {
+            grid-template-columns: 400px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .single {
+        &-product {
+            grid-template-columns: 300px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+
+}

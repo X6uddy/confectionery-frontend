@@ -1,0 +1,38 @@
+.single{
+    margin: 0 auto;
+    &-product {
+        display: grid;
+        grid-template-columns: 400px 600px;
+        gap: 50px;
+        color: rgb(131, 131, 131);
+        text-align: left;
+        padding: 50px 0;
+        justify-content: center;
+        &__image {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &-info {
+        &__title {
+            text-align: left;
+            font-size: 28px;
+            color: rgb(0, 0, 0);
+        }
+        h2 {
+            margin: 0;
+        }
+        h3 {
+            font-size: 22px;
+            color: rgb(0, 0, 0);
+        }
+        &__price, &__nutritional, &__expiration, &__weight, &__proteins, &__composition {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        span {
+            font-size: 18px;
+            color: rgb(8, 5, 5);
+        }
+    }
+}
