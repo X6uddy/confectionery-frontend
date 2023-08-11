@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-
 import './BasketPage.scss';
 import BasketCard from "../../basketCard/BasketCard";
 import { useSelector } from "react-redux";
+import basketIcon from '../../../resources/icons/basketCard/basketicon.svg'
+import { Link } from "react-router-dom";
 
 
 const BasketPage = () => {
@@ -25,11 +26,34 @@ const BasketPage = () => {
                 <div className="basketPage-wrapper">
                     <div className="basketPage__mainContent">
                         <div className="basketPage__mainContent_itemsList">
-                            {basketItems.map((item) => (
+                            {(basketItems.length !== 0) ? basketItems.map((item) => (
                                     <BasketCard key={item.productID} basketItem={item} />
-                            ))}
+                            )): <div className="basketPage__mainContent_itemsList-empty">
+                                В вашей корзине пока пусто
+                                <img alt="basket" src={basketIcon} />
+                                <Link to="/catalog" className="basketPage__btn basketPage__btn_empty">Сделать заказ</Link>
+                                </div>}
                         </div>
-                        <div className="basketPage__mainContent_makeOrder">
+                    </div>
+                    <div className="basketPage__infoWindow">
+                        <div className="basketPage__infoWindow-top">
+                            <div className="basketPage__infoWindow_title">Итого</div>
+                            <div className="basketPage__infoWindow_fullPrice">
+                                <div className="basketPage__infoWindow_fullPrice-tag">Стоимость товаров</div>
+                                <div className="basketPage__infoWindow_fullPrice-divider"></div>
+                                <div className="basketPage__infoWindow_fullPrice-price">{totalAmount} руб</div>
+                            </div>
+                        </div>
+                        <div className="basketPage__infoWindow-bottom">
+                            <div className="basketPage__infoWindow_forPay">К оплате</div>
+                            <div className="basketPage__infoWindow_sum">{totalAmount} руб</div>
+                        </div>
+                        <div className="basketPage__btn-wrapper">
+                            <button className="basketPage__btn">Оформить заказ</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="basketPage__mainContent_makeOrder">
                             <div className="basketPage__title">Оформить заказ</div>
                             <div className="basketPage__describe">Укажите контактные  данные, чтобы продавец смог связаться с вами</div>
                             <form className="basketPage__form">
@@ -76,27 +100,7 @@ const BasketPage = () => {
                                 </div>
                             </div>
                             <button className="basketPage__btn basketPage__btn_mainContent">Оформить заказ</button>
-                        </div>
                     </div>
-                    <div className="basketPage__infoWindow">
-                        <div className="basketPage__infoWindow-top">
-                            <div className="basketPage__infoWindow_title">Итого</div>
-                            <div className="basketPage__infoWindow_fullPrice">
-                                <div className="basketPage__infoWindow_fullPrice-tag">Стоимость товаров</div>
-                                <div className="basketPage__infoWindow_fullPrice-divider"></div>
-                                <div className="basketPage__infoWindow_fullPrice-price">{totalAmount} руб</div>
-                            </div>
-                        </div>
-                        <div className="basketPage__infoWindow-bottom">
-                            <div className="basketPage__infoWindow_forPay">К оплате</div>
-                            <div className="basketPage__infoWindow_sum">{totalAmount} руб</div>
-                        </div>
-                        <div className="basketPage__btn-wrapper">
-                            <button className="basketPage__btn">Оформить заказ</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     )

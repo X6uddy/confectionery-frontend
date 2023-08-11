@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './ProductCard.scss';
 import './ProductCard-media.scss';
 import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
 import { Link } from "react-router-dom";
 import { addItem } from "../../store/basketSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
+import inBasket from '../../resources/icons/productCard/tip.svg'
 
 
 
 const ProductCard = ({product}) => {
+
+    const [basketStatus, setBasket] = useState();
+    const {basketItems} = useSelector(state => state.basketStates);
     const {photoPath,productID,title, price} = product;
     const dispatch = useDispatch();
+    useEffect(() => {
+        if(basketItems.find(item => item.productID === productID)){
+            setBasket(true)
+        }else{
+            setBasket(false)
+        }
+    },[basketItems,productID])
 
     return(
         <>
@@ -24,8 +35,12 @@ const ProductCard = ({product}) => {
                 <div className="card__footer">
                     <div className="card__footer_price">{price} руб.</div>
                     <div className="card__footer_basket">
-                        <img onClick={() => dispatch(addItem(product))} className="card__footer_basket-icon" alt="cardBasket" src={cardBasket}/>
-                        <div className="card__footer_basket-title">В корзину</div>
+                        {basketStatus ? <img className="card__footer_basket-icon" alt="cardBasket" src={inBasket}/> : <img onClick={() => dispatch(addItem(product))} className="card__footer_basket-icon" alt="cardBasket" src={cardBasket}/>}
+                        {basketStatus ?
+                            <div className="card__footer_basket-title"> В корзине </div>
+                            :
+                            <div onClick={() => dispatch(addItem(product))} className="card__footer_basket-title">В корзину</div>
+                        }
                     </div>
                 </div>
             </div>
