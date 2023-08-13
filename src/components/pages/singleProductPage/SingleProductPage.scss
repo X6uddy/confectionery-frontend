@@ -26,13 +26,18 @@
             font-size: 22px;
             color: rgb(0, 0, 0);
         }
-        &__price, &__nutritional, &__expiration, &__weight, &__proteins, &__composition {
+        &__nutritional, &__expiration, &__weight, &__proteins, &__composition {
             font-size: 18px;
             margin-top: 10px;
         }
         span {
             font-size: 18px;
             color: rgb(8, 5, 5);
+        }
+        &__price {
+            margin-top: 10px;
+            border: 1px;
+            background-color: burlywood;
         }
     }
 }

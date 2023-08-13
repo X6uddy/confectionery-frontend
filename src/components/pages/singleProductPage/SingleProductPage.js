@@ -12,13 +12,13 @@ const SingleProductPage = () => {
     const {productId} = useParams();
     const {data = [], isLoading} = useGetOneProductQuery(productId);
     if(isLoading) {
-        console.log('Loading...')
+        <Spinner/>
     } else {
         return(
             data.map(item => {
-                const {title, photoPath, proteins, fats, carbohydrates, energy, expiration, price, composition} = item;
+                const {title, photoPath, proteins, fats, carbohydrates, energy, expiration, price, composition, _id} = item;
                 return (
-                    <div className="container">
+                    <div key={_id} className="container">
                         <div className="single-product">
                             <img src={`http://127.0.0.1:3004${photoPath}`} alt={title} className="single-product__image" />
                             <div className="single-info">
@@ -31,7 +31,10 @@ const SingleProductPage = () => {
                                                                                                 жиры: {fats};
                                                                                                 углеводы: {carbohydrates}</span></div>
                                 <div className="single-info__composition">Состав: <span>{composition}</span></div>
-                                <p className="single-info__price">Цена: <span>{price} рублей за упаковку</span></p>
+                                <div className="single-info__price">
+                                    <div className="single-info__price-value"><span>{price} руб</span></div>
+                                    <button className="single-info__add">Добавить в корзину</button>
+                                </div>
                             </div>
                         </div>
                     </div>
