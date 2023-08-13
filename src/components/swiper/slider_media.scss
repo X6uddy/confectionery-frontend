@@ -7,7 +7,7 @@
 @media (max-width: 992px) {
     .mySwiper {
         width: 740px;
-        height: 450px;
+        // height: 450px;
     }
     .slider {
         &__descr {
@@ -19,7 +19,7 @@
 @media (max-width: 768px) and (min-width: 630px) {
     .mySwiper {
         width: 490px;
-        height: 360px;
+        // height: 360px;
     }
     .slider {
         &__descr {
@@ -28,33 +28,36 @@
     }
 }
 
-@media (max-width: 768px) {
-    .swiper-pagination {
-        display: none;
-    }
-}
-
 @media (max-width: 630px) and (min-width: 576px) {
     .mySwiper {
         width: 550px;
-        height: 300px;
+        // height: 300px;
+    }
+    figure.slider-wrapper img {
+        height: 370px;
     }
 }
 
 @media (max-width: 576px) and (min-width: 430px) {
     .mySwiper {
         width: 420px;
-        height: 300px;
+        // height: 730px;
     }
     .slider {
         &__descr {
             font-size: 17px;
         }
     }
+    figure.slider-wrapper img {
+        height: 370px;
+    }
 }
 
 @media (max-width: 430px) {
     .mySwiper {
         width: 350px;
+    }
+    figure.slider-wrapper img {
+        height: 370px;
     }
 }
