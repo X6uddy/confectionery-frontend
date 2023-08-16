@@ -7,11 +7,35 @@
 @media (max-width: 992px) {
     .mySwiper {
         width: 740px;
-        // height: 450px;
     }
     .slider {
-        &__descr {
-            font-size: 17px;
+        &-block figure figcaption {
+            background: rgba(109, 92, 57, 0.432);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &-block figure {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            overflow: hidden;
+            // background: rgba(109, 92, 57, 0.6509803922);
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    figure.slider-wrapper {
+        h3 {
+            font-size: 18px;
+            left: 10px;
+            bottom: 20px
+        }
+        h3::after {
+            opacity: 1;
+            transform: translate3d(0, 0, 0)
         }
     }
 }
@@ -22,19 +46,24 @@
         // height: 360px;
     }
     .slider {
-        &__descr {
-            font-size: 18px;
-        }
+
     }
 }
 
-@media (max-width: 630px) and (min-width: 576px) {
+@media (max-width: 630px) {
     .mySwiper {
         width: 550px;
         // height: 300px;
     }
-    figure.slider-wrapper img {
-        height: 370px;
+    figure.slider-wrapper {
+        img {
+            height: 370px;
+        }
+        h3 {
+            left: 5px;
+            font-size: 15px;
+            bottom: 20px;
+        }
     }
 }
 
@@ -44,9 +73,7 @@
         // height: 730px;
     }
     .slider {
-        &__descr {
-            font-size: 17px;
-        }
+
     }
     figure.slider-wrapper img {
         height: 370px;
@@ -57,7 +84,14 @@
     .mySwiper {
         width: 350px;
     }
-    figure.slider-wrapper img {
-        height: 370px;
+    figure.slider-wrapper {
+        img {
+            height: 350px;
+        }
+        h3 {
+            left: 5px;
+            font-size: 15px;
+            bottom: 20px;
+        }
     }
 }

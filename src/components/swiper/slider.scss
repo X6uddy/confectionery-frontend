@@ -20,6 +20,9 @@
 // }
 
 .slider{
+    &__title {
+        text-align: center;
+    }
     &-block {
         overflow: hidden;
         margin: 0;
