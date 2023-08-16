@@ -2,6 +2,7 @@
 .single {
     &-product {
         grid-template-columns: 400px 300px;
+        grid-template-areas: 'a b' 'c c';
     }
 }
 }
@@ -10,6 +11,11 @@
     .single {
         &-product {
             grid-template-columns: 400px;
+            grid-template-areas: 'a a' 'b b' 'c c';
+            &__image {
+                width: 70%;
+                justify-self: center;
+            }
         }
     }
 }
@@ -18,10 +24,19 @@
     .single {
         &-product {
             grid-template-columns: 300px;
+            &__image {
+                width: 70%;
+            }
         }
     }
 }
 
 @media (max-width: 400px) {
-
+    .single {
+        &-product {
+            &__image {
+                width: 100%;
+            }
+        }
+    }
 }
