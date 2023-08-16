@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import cityIcon from '../../resources/icons/header/city.svg';
 import phoneIcon from '../../resources/icons/header/phoneicon.svg';
@@ -20,7 +20,7 @@ import './Header-media.scss';
 
 function Header() {
     const dispatch = useDispatch();
-
+    const basket = useSelector(state => state.basket)
 
     return(
         <>
@@ -45,9 +45,9 @@ function Header() {
                                 <Link to='/basket' className="header__top_basketIcon">
                                     {/* здесь будет отображаться кол-во товаров в корзине */}
                                     <img className='header__top_basketIcon' src={basketIcon} alt='basketIcon'/>
-                                    <div className="header__top_basketIcon-counter">24</div> 
+                                    <div className="header__top_basketIcon-counter">{basket.length}</div> 
                                 </Link>
-                                <Link to='/basket' className="header__top_tag">В корзине (4 товара)</Link>
+                                <Link to='/basket' className="header__top_tag">В корзине ({basket.length} товара)</Link>
                             </div>
                             </div>
                             <img onClick={() => dispatch(openMenu())} className='header__top_burgerIcon' alt='burgerIcon' src={burgerIcon}/>
