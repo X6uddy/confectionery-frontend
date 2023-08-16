@@ -13,8 +13,14 @@ const productsApiSlice = createApi({
             }),
             getOneProduct: builder.query({
                 query: (id) => `products/${id}`
-            })
+            }),
+            // getBasketProducts: builder.query({
+            //     query: (productIds) => ({
+            //         url: 'products/basket',
+            //         params:  {productIds}
+            //     })
+            // })
     })
 });
 export { productsApiSlice}
-export const {useGetSumProductsQuery,useGetProductsCatalogQuery, useGetOneProductQuery} = productsApiSlice;
+export const {useGetSumProductsQuery,useGetProductsCatalogQuery, useGetOneProductQuery, /*useGetBasketProductsQuery*/} = productsApiSlice;
