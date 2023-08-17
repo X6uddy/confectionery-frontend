@@ -11,8 +11,11 @@ const productsApiSlice = createApi({
             getProductsCatalog: builder.query({ 
                 query: (skip = '0') => `products/catalog?skip=${skip}`,
                  
+            }),
+            getOneProduct: builder.query({
+                query: (id) => `products/${id}`
             })
     })
 });
 export { productsApiSlice}
-export const {useGetSumProductsQuery,useGetProductsCatalogQuery} = productsApiSlice;
+export const {useGetSumProductsQuery, useGetProductsCatalogQuery, useGetOneProductQuery} = productsApiSlice;
