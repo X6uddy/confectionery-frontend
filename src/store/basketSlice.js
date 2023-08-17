@@ -65,18 +65,15 @@ const basketSlice = createSlice({
               );
 
         },
-        //we give id for remove
         removeItem(state,action) {
 
             const productID = action.payload;
             const existingItem = state.basketItems.find((item) => item.productID === productID);
 
-            if(existingItem.quantity === 1){
-                state.basketItems = state.basketItems.filter((item) => item.productID !== productID);
-            }else {
+           if(existingItem){
                 existingItem.quantity--;
-                existingItem.totalPrice = Number(existingItem.totalPrice) - Number(existingItem.priceForOne) ;
-            }
+                existingItem.totalPrice = Number(existingItem.totalPrice) - Number(existingItem.priceForOne);
+           }
 
             state.totalAmount = state.basketItems.reduce(
                 (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
@@ -125,14 +122,8 @@ const basketSlice = createSlice({
             const existingItem = state.basketItems.find((item) => item.productID === productID);
             
             if(existingItem){
-                if(Number(quantityInput) === 0 || Number(quantityInput) < 0 || quantityInput === ''){
-                    state.basketItems = state.basketItems.filter((item) => item.productID !== productID);
-                }
-                else{
-                    existingItem.quantity = Number(quantityInput);
-                    existingItem.totalPrice = Number(quantityInput) * Number(existingItem.price);
-                }
-                
+                existingItem.quantity = Number(quantityInput);
+                existingItem.totalPrice = Number(quantityInput) * Number(existingItem.price);
             }
 
 
