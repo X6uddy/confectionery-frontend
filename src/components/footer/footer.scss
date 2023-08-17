@@ -2,8 +2,6 @@
 
 .footer {
     background-color: $color_footer;
-    // position: absolute;
-    // bottom: 0;
     width: 100%;
     padding: 25px 0;
     &-wrapper {
@@ -21,7 +19,7 @@
             margin-bottom: 15px;
         }
         a {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 400;
             list-style-type: none;
             margin-bottom: 10px;
