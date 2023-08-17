@@ -10,7 +10,6 @@ const BasketCard = ({basketItem}) => {
 
     const dispatch = useDispatch();
     const [quantityValue,setValue] = useState('');
-    const [activeInput,setInputStatus] = useState(false);
     const {productID, totalPrice, quantity, title, photoPath} = basketItem;
     
     useEffect(() => {
@@ -31,19 +30,15 @@ const BasketCard = ({basketItem}) => {
                 <div className="basketCard__infoBlock-wrapper">
                     <div className="basketCard__infoBlock_amount">
                         <div onClick={() => dispatch(removeItem(productID))} className="basketCard__infoBlock_amount-dec">-</div>
-                        <div className="basketCard__infoBlock_amount-sum" onClick={() => setInputStatus(true)}>
-                            {activeInput ? 
+                        <div className="basketCard__infoBlock_amount-sum"> 
                             <input 
                             value={quantityValue}
                             onChange={(e) => setValue(e.target.value)}
                             onBlur={(e) => {
                                 combineFunc(e.target.value)
-                                setInputStatus(false)
                             }}
                             type="number"
                             required/> 
-                            :
-                            quantity}
                         </div>
                         <div onClick={() => dispatch(addItem(basketItem))} className="basketCard__infoBlock_amount-inc">+</div>
                     </div>

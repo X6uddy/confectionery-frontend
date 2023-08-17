@@ -59,7 +59,7 @@ function Header() {
                     <div className="container">
                         <nav className="header__main_wrapper">
                                 <NavLink to="/deliveryAndPayment" className="header__main_item">Доставка и оплата</NavLink>
-                                <NavLink to='/wholesale' className="header__main_item">Оптовые поставки</NavLink>
+                                <NavLink to='/contacts' className="header__main_item">Контакты</NavLink>
                                 <Link to='/' className='header__main_item'><img className='header__main_logo' src={logo} alt='logo'/></Link>
                                 <NavLink to="/story" className="header__main_item">Наша История</NavLink>
                                 <NavLink to="/catalog" end className="header__main_item">каталог товаров</NavLink>
