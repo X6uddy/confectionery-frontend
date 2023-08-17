@@ -1,0 +1,42 @@
+@media (max-width: 1200px) {
+.single {
+    &-product {
+        grid-template-columns: 400px 300px;
+        grid-template-areas: 'a b' 'c c';
+    }
+}
+}
+
+@media (max-width: 768px) {
+    .single {
+        &-product {
+            grid-template-columns: 400px;
+            grid-template-areas: 'a a' 'b b' 'c c';
+            &__image {
+                width: 70%;
+                justify-self: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .single {
+        &-product {
+            grid-template-columns: 300px;
+            &__image {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .single {
+        &-product {
+            &__image {
+                width: 100%;
+            }
+        }
+    }
+}
