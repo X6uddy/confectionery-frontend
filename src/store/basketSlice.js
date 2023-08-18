@@ -137,14 +137,37 @@ const basketSlice = createSlice({
                 0
             );
             
-
             setItemFunc(
                 state.basketItems.map((item) => item),
                 state.totalAmount,
                 state.totalQuantity
             );
+        },
+        sendOrderByEmail(state,action){
+            const buyersName = action.payload.buyersName;
+            const buyersNumber = action.payload.buyersNumber;
+            const buyersComment = action.payload.buyersComment;
+
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ buyersName,buyersComment,buyersNumber, order: state.basketItems, orderPrice: state.totalAmount})
+            };
+            fetch('http://127.0.0.1:3004/mail/sendOrder', requestOptions)
+            .catch(err => console.log(err));
+
+            state.basketItems = [];
+            state.totalAmount = 0;
+            state.totalQuantity = 0;
+            
+            setItemFunc(
+                state.basketItems.map((item) => item),
+                state.totalAmount,
+                state.totalQuantity
+            );
+
         }
     },
 });
-export const {addItem, removeItem, deleteItem, setInputState} = basketSlice.actions;
+export const {addItem, removeItem, deleteItem, setInputState, sendOrderByEmail} = basketSlice.actions;
 export default basketSlice.reducer;

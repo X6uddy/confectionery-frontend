@@ -1,0 +1,43 @@
+.privacyPolicy{
+    padding: 20px 5px;
+    background-color: #F7F7F7;
+    &__border{
+        border: 1px solid #000;
+        border-radius: 3px;
+        padding: 20px 0;
+        padding-left: 10px;
+        background-color: #FFFFFF;
+    }
+    &__title{
+        color: #000000;
+        font-weight: 600;
+        font-size: 20px;
+        font-family: Montserrat;
+        margin-bottom: 35px;
+    }
+    &__topic{
+        color: #000000;
+        font-weight: 600;
+        font-size: 17px;
+        font-family: Montserrat;
+        margin-bottom: 25px;
+    }
+    &__text{
+        &_first{
+            color: #000000;
+            font-weight: 400;
+            font-size: 17px;
+            font-family: PTS-Regular, sans-serif;
+            margin-bottom: 20px;
+        }
+        &_second{
+            color: #000000;
+            font-weight: 400;
+            font-size: 17px;
+            font-family: PTS-Regular, sans-serif;
+            margin-bottom: 35px;
+            margin-left: 40px;
+        }
+    }
+
+}

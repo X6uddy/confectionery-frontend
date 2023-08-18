@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import './BasketPage.scss';
 import BasketCard from "../../basketCard/BasketCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import basketIcon from '../../../resources/icons/basketCard/basketicon.svg'
 import { Link } from "react-router-dom";
+import { sendOrderByEmail } from "../../../store/basketSlice";
 
 
 const BasketPage = () => {
     const {basketItems, totalQuantity, totalAmount} = useSelector(state => state.basketStates);
 
-
-    const [byersName,setBuyersName] = useState('');
+    const dispatch = useDispatch()
+    const [buyersName,setBuyersName] = useState('');
     const [buyersNumber,setBuyersNumber] = useState('');
     const [buyersComment,setBuyersComment] = useState('');
+
+    function sendMail() {
+        dispatch(sendOrderByEmail({buyersName,buyersNumber,buyersComment}))
+        setBuyersComment('');
+        setBuyersNumber('');
+        setBuyersName('');
+    } 
 
     function typeOfWords(int, array) {
         return (array = array || ['товар', 'товара', 'товаров']) && array[(int % 100 > 4 && int % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(int % 10 < 5) ? int % 10 : 5]];
@@ -62,7 +70,7 @@ const BasketPage = () => {
                                         <div>Ваше имя*</div>
                                         <input
                                         type="text"
-                                        value={byersName}
+                                        value={buyersName}
                                         onChange={e => setBuyersName(e.target.value)}
                                         placeholder="Введите имя"
                                         required
@@ -99,7 +107,8 @@ const BasketPage = () => {
                                 {totalAmount} руб
                                 </div>
                             </div>
-                            <button className="basketPage__btn basketPage__btn_mainContent">Оформить заказ</button>
+                            <button onClick={sendMail} className="basketPage__btn basketPage__btn_mainContent">Оформить заказ</button>
+                            <div className="basketPage__privacyPolicy">Нажимая на кнопку "Оформить заказ" Я разрешаю обработку моих персональных данных в соответствии с <Link className="basketPage__privacyPolicy_link" to='/privacypolicy'>Политикой конфиденциальности</Link></div>
                     </div>
             </div>
         </div>

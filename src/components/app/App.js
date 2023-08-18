@@ -1,18 +1,6 @@
 import { lazy} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
-// import Dashboard from '../dashboard/Dashboard';
-// import Spinner from '../spinner/Spinner';
-// import StoryPage from '../pages/storyPage/StoryPage';
-// import WholesalePage from '../pages/wholesalePage/WholesalePage';
-// import DeliveryAndPaymentPage from '../pages/deliveryAndPaymentPage/DeliveryAndPaymentPage';
-// import CatalogPage from '../pages/catalogPage/CatalogPage';
-// import SingleProductPage from '../pages/singleProductPage/SingleProductPage';
-// import BasketPage from '../pages/basketPage/BasketPage';
-// import MainPage from '../pages/MainPage';
-// import Page404 from '../pages/404'
-// import Header from '../header/Header';
-// import Footer from '../footer/Footer';
 
 
 const Page404 = lazy(() => import('../pages/404'));
@@ -24,6 +12,8 @@ const DeliveryAndPaymentPage = lazy(() => import('../pages/deliveryAndPaymentPag
 const CatalogPage = lazy(() => import('../pages/catalogPage/CatalogPage'));
 const SingleProductPage = lazy(() => import('../pages/singleProductPage/SingleProductPage'));
 const BasketPage = lazy(() => import('../pages/basketPage/BasketPage'));
+const PrivacyPolicyPage = lazy(() => import('../pages/privacyPolicyPage/PrivacyPolicyPage'));
+
 
 
 const App = () => {
@@ -38,6 +28,7 @@ const App = () => {
                         <Route path="catalog" element={<CatalogPage />} />
                         <Route path="catalog/:productId" element={<SingleProductPage />} />
                         <Route path="basket" element={<BasketPage />} />
+                        <Route path="privacypolicy" element={<PrivacyPolicyPage />} />
                         <Route path="*" element={<Page404/>} />
                     </Route>
                 </Routes>

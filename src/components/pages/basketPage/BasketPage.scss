@@ -256,4 +256,16 @@
             }
         }
     }
+    &__privacyPolicy {
+        color: #000;
+        font-family: PTSans-Regular;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 18px;
+        &_link {
+            color: #4E9DD3;
+            text-decoration: none;
+            border-bottom: 1px solid #4E9DD3 ;
+        }
+    }
 }

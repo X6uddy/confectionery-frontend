@@ -4,8 +4,7 @@
         max-height: 450px;
         border-radius: 5px;
         overflow: hidden;
-        border: 1px solid #EDEDF0;
-        border: 1px solid #984b46;
+        border: 1px solid #000;
     }
     &__img {
         width: 350px;
@@ -27,9 +26,6 @@
             line-height: normal;
             text-decoration: none;
             cursor: pointer;
-            &:hover {
-                color: green
-            }
         }
     }
     &__footer {
