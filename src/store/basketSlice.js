@@ -22,7 +22,9 @@ const setItemFunc = (item, totalAmount, totalQuantity) => {
 const initialState = {
     basketItems: items,
     totalAmount: totalAmount,
-    totalQuantity: totalQuantity
+    totalQuantity: totalQuantity,
+    basketModal: false,
+    orderSuccessModal:false,
 }
 
 const basketSlice = createSlice({
@@ -166,8 +168,30 @@ const basketSlice = createSlice({
                 state.totalQuantity
             );
 
+        },
+        openBasketModal(state,action) {
+            state.basketModal = true
+        },
+        closeBasketModal(state,action){
+            state.basketModal = false
+        },
+        openSuccessModal(state,action) {
+            state.orderSuccessModal = true
+        },
+        closeSuccessModal(state,action){
+            state.orderSuccessModal = false
         }
     },
 });
-export const {addItem, removeItem, deleteItem, setInputState, sendOrderByEmail} = basketSlice.actions;
+export const {
+    addItem,
+    removeItem,
+    deleteItem,
+    setInputState,
+    sendOrderByEmail,
+    openBasketModal,
+    closeBasketModal,
+    openSuccessModal,
+    closeSuccessModal,
+    } = basketSlice.actions;
 export default basketSlice.reducer;
