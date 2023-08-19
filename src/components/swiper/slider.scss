@@ -1,138 +1,62 @@
-@import '../../style/variables.scss';
-
-*:after, *:before { 
-	box-sizing: border-box; 
-}
-
-.swiper-slide {
-    &-prev, &-next {
-        scale: 0.93;
-        transition: all 0.35s;
-    }
-}
-
-// .mySwiper {
-//     margin-top: 50px;
-//     // height: 600px;
-//     // width: 1100px;
-//     height: 550px;
-//     width: 1000px;
-// }
-
-.slider{
+.slider {
     &__title {
         text-align: center;
+        font-weight: 500;
+        font-size: 35px;
+        color: rgb(75, 72, 72);
     }
-    &-block {
-        overflow: hidden;
-        margin: 0;
-        width: 100%;
-        list-style: none;
-        text-align: center;
-        // box-shadow: 0px -1px 5px 0px rgba(124, 118, 99, 0.5);
-        // scale: 0.95;
-    }
-    &-block figure {
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-        overflow: hidden;
-        background: #6d5c39a6;
-        text-align: center;
-        cursor: pointer;
-    }
-    &-block figure img {
-        position: relative;
-        display: block;
-        opacity: 1;
-        height: 100%;
-    }
-    &-block figure figcaption {
-        padding: 2em;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1.25em;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-    &-block figure figcaption::before,
-    &-block figure figcaption::after {
-	pointer-events: none;
-    }
-    &-block figure figcaption{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    &-block figure h3 {
-        word-spacing: -0.15em;
-        font-weight: 300;
-    }
-    &-block figure h3 span {
-        font-weight: 800;
-    }
-    &-block figure h3,
-    &-block figure p {
-	margin: 0;
-    }
-    &-block figure p {
-        letter-spacing: 1px;
-        font-size: 68.5%;
-    }
-
-}
-
-figure.slider-wrapper {
-    img {
-        // height: 30em;
-        height: 480px;
-        width: calc(100% + 20px);
+    &__photo {
+        transition: all 0.8s;
         object-fit: cover;
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
-        transform: scale(1.1);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        -webkit-filter: brightness(0.65);
+        filter: brightness(0.65);
+        &:hover {
+            scale: 1.05;
+            -webkit-filter: brightness(0.95);
+            filter: brightness(0.95);
+        }
     }
-    &:hover img {
-        opacity: 0.4;
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-    }
-    figcaption {
-        text-align: left;
-    }
-    h3 {
+    &__descr {
         position: absolute;
         overflow: hidden;
         padding: 0.5em 0;
         opacity: 1;
-        bottom: 40px;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 19px;
+        &::after {
+            opacity: 1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            content: '';
+            -webkit-transition: -webkit-transform 0.6s;
+            transition: transform 0.6s;
+            -webkit-transition: 2s ease;
+            -webkit-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
+        }
     }
-    &:hover h3 {
+}
+.swiper-slide {
+    padding: 0 10px;
+    flex-shrink: 1;
+    &:hover .slider__descr {
         transition: all 0.6s;
         opacity: 1;
     }
-    h3::after {
-        opacity: 1;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: #fff;
-        content: '';
-        -webkit-transition: -webkit-transform 0.6s;
-        transition: transform 0.6s;
-        -webkit-transition: 2s ease;
-        -webkit-transform: translate3d(-100%,0,0);
-        transform: translate3d(-100%,0,0);
-    }
-    &:hover h3::after {
+    &:hover .slider__descr::after {
         opacity: 1;
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
     }
 }
+
