@@ -1,9 +1,11 @@
 @import '../../style/variables.scss';
 
 .footer {
+    // position: absolute;
     background-color: $color_footer;
     width: 100%;
     padding: 25px 0;
+    bottom: 0;
     &-wrapper {
         // margin: 0 auto;
         display: flex;
