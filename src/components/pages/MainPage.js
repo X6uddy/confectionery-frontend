@@ -4,8 +4,6 @@ import Slider from '../swiper/Slider';
 import Reasons from '../reasons/Reasons';
 import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 
-import promoImg from '../../resources/img/main_page/promo.jpg'
-
 
 function MainPage() {
 
