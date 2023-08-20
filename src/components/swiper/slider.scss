@@ -1,9 +1,11 @@
 .slider {
+    // background: linear-gradient(180deg, rgb(210, 195, 151) 6%, rgb(93, 186, 189) 98%);
     &__title {
         text-align: center;
         font-weight: 500;
         font-size: 35px;
         color: rgb(75, 72, 72);
+        margin-top: 0;
     }
     &__photo {
         transition: all 0.8s;
