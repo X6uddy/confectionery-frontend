@@ -12,7 +12,8 @@ import './singleProductPage-media.scss';
 
 import basketPhoto from '../../../resources/icons/productCard/cardBasket_white.png';
 import inBasket from '../../../resources/icons/productCard/tip-white.png';
-import tab_down from '../../../resources/icons/singleProduct/tab-down.png';
+import tabDown from '../../../resources/icons/singleProduct/tab-down.png';
+import priceWarning from '../../../resources/icons/singleProduct/priceWarning_white.png';
 
 
 const SingleProductPage = () => {
@@ -61,6 +62,7 @@ const SingleProductPage = () => {
                         <div className="single-product">
                             <img src={`http://127.0.0.1:3004${photoPath}`} alt={title} className="single-product__image" />
                             <div className="single-info">
+
                                 <div>
                                     <h2 className="single-info__title">{title}</h2>
                                     <div className="single-info-wrapper">
@@ -77,7 +79,11 @@ const SingleProductPage = () => {
                                         {/* <div className="single-info__composition">Состав: <span>{composition}</span></div> */}
                                     </div>
                                 </div>
+
                                 <div className="single-info_price">
+                                    <div className="single-info_price__warning">
+                                        <img src={priceWarning} alt="price-warning" />                                                                                    
+                                        Все цены указаны за 1 киллограм</div>
                                     <div className="single-info_price_value" >{price}</div>
                                     <button onClick={() => dispatch(addItem(item))} disabled={basketStatus} className="single-info__add">
                                         {basketStatus ? 
@@ -100,7 +106,7 @@ const SingleProductPage = () => {
                                 >
                                     <div className={`tab-item__title ${index === activeTab ? 'tab-item__active-mobile' : ''}`}>
                                         {tab.title}
-                                        <img src={tab_down} alt="arrow-down" className="arror-down"/>
+                                        <img src={tabDown} alt="arrow-down" className="arror-down"/>
                                     </div>
                                     {activeTab === index && (
                                     <div className="tab-content tab-content_mobile">
