@@ -23,6 +23,11 @@
             &__title {
                 text-align: center;
             }
+            &_price {
+                &:hover &__warning {
+                    display: none;
+                }
+            }
         }
     }
 

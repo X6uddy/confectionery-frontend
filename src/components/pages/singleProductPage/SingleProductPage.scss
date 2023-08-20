@@ -55,6 +55,7 @@
         }
         &_price {
             display: flex;
+            position: relative;
             justify-content: space-between;
             align-items: center;
             height: 80px;
@@ -67,6 +68,29 @@
                 font-size: 23px;
                 font-weight: 600;
                 color: #E7426A;
+            }
+            &__warning {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0px;
+                padding: 0 10px;
+                // display: flex;
+                // justify-content: space-between;
+                align-items: center;
+                background-color: #fde3e3;
+                width: 100%;
+                color: white;
+                transition: all 0.9s;
+                img {
+                    width: 32px;
+                    margin-right: 20px;
+                }
+            }
+            &:hover &__warning {
+                display: flex;
+                transform: translateY(-32px);
+                transition: all 0.9s;
             }
         }
         &__add {
