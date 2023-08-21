@@ -31,7 +31,7 @@ const BasketPage = () => {
         }else if (!/\S/.test(buyersName)){
             setNameRequired(false);
             return
-        }else if(!/\S/.test(buyersNumber)){
+        }else if(!/\S/.test(buyersNumber) || buyersNumber.replace(/\D/g,'').length !== 11){
             setNumberRequired(false);
             return
         }else {
@@ -50,7 +50,7 @@ const BasketPage = () => {
 
     }
     function onNumberChange(e){
-        console.log(buyersNumber)
+        console.log(buyersNumber.replace(/\D/g,'').length)
         setNumberRequired(true)
         setBuyersNumber(e.target.value)
     }
