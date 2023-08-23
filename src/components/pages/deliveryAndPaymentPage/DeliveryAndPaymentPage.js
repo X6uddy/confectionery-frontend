@@ -1,8 +1,10 @@
-import './deliveryAndPaymentPage.scss';
-import './deliveryAndPaymentPage-media.scss';
+import YandexMap from '../../modals/mapModal/YandexMap';
 
 import bicycle from '../../../resources/img/DeliveryAndPaymentPage/bicycle.png';
 import logo from '../../../resources/img/DeliveryAndPaymentPage/logo_img.png';
+
+import './deliveryAndPaymentPage.scss';
+import './deliveryAndPaymentPage-media.scss';
 
 const DeliveryAndPaymentPage = () => {
     return (
@@ -47,6 +49,8 @@ const DeliveryAndPaymentPage = () => {
                     </div>
                     <div className="delivery-block__image"><img src={logo} alt="logo" /></div>
                 </div>
+
+                <YandexMap />
             </div>
         </div>
     )
