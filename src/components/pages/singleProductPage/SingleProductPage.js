@@ -83,8 +83,8 @@ const SingleProductPage = () => {
                                 <div className="single-info_price">
                                     <div className="single-info_price__warning">
                                         <img src={priceWarning} alt="price-warning" />                                                                                    
-                                        Все цены указаны за 1 киллограм</div>
-                                    <div className="single-info_price_value" >{price}</div>
+                                        Цена может изменяться в зависимости от сырья</div>
+                                    <div className="single-info_price_value" >{price} руб/кг</div>
                                     <button onClick={() => dispatch(addItem(item))} disabled={basketStatus} className="single-info__add">
                                         {basketStatus ? 
                                         <img src={inBasket} alt='basketIcon' className="single-info__add_icon"/>:
