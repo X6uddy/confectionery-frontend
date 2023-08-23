@@ -40,12 +40,12 @@
             font-size: 17px;
             border-radius: 20px;
             background: 
-            linear-gradient(217deg, rgb(255 121 121 / 80%), rgb(255 147 147 / 0%) 70.71%), 
-            linear-gradient(127deg, rgb(145 255 145 / 80%), rgba(0, 255, 0, 0) 70.71%), 
-            linear-gradient(336deg, rgb(123 255 243 / 80%), rgba(0, 0, 255, 0) 70.71%);
+            linear-gradient(217deg, rgb(203 187 0 / 80%), rgba(255, 147, 147, 0) 70.71%), 
+            linear-gradient(127deg, rgba(145, 255, 145, 0.8), rgba(0, 255, 0, 0) 70.71%),
+            linear-gradient(336deg, rgba(123, 255, 243, 0.8), rgba(0, 0, 255, 0) 70.71%);
         }
         &-card &_back {
-            background-color: #f7b2b2;
+            background-color: #e5e7c3;
             transform: rotateY(180deg);
             padding: 20px;
             text-align: center;
