@@ -11,7 +11,7 @@ const Reasons = () => {
     return (
         <div className="reasons">
             <div className="container">
-                <h1 className='reasons__title'>Почему мы?</h1>
+                <h2 className='reasons__title'>Почему мы?</h2>
                 
                 <div className="reasons-wrapper">
                     <div className="reasons-block">
