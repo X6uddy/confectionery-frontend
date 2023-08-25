@@ -1,8 +1,8 @@
 .contacts {
     display: grid;
     grid-template-columns: 300px 300px;
-    column-gap: 70px;
-    padding-bottom: 25px;
+    column-gap: 100px;
+    padding: 60px 0;
     justify-content: center;
     &-logo {
         align-self: center;

@@ -9,13 +9,12 @@ const ContactsPage = () => {
     return (
         <div className="container">
             <div className="contacts">
+                <h1 className="contacts-info__title">Контакты</h1>
                 <div className="contacts-logo">
                     <img src={logo} alt="logo"/>
                 </div>
 
                 <div className="contacts-info">
-                    {/* <h1 className="contacts-info__title">Contacts</h1> */}
-
                     <div className="contacts-info-block">
                         <h3 className="contacts-info__subtitle">Режим работы:</h3>
                         <div className="contacts-info_working">
