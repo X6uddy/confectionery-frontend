@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './BasketCard.scss';
+import './BasketCard-media.scss';
 import { useDispatch } from "react-redux";
 import { addItem, removeItem, deleteItem, setInputState} from "../../store/basketSlice";
 import removeIcon from '../../resources/icons/basketCard/removeicon.svg';

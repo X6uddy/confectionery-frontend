@@ -1,5 +1,6 @@
 import React from "react";
 import './BasketModal.scss';
+import './BasketModal-media.scss';
 import { Link } from "react-router-dom";
 import closeModal from '../../../resources/icons/basketModal/closeIcon.svg'
 import { useSelector,useDispatch } from "react-redux";

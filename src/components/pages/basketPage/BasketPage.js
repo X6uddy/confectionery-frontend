@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './BasketPage.scss';
+import './BasketPage-media.scss';
 import BasketCard from "../../basketCard/BasketCard";
 import { useDispatch, useSelector } from "react-redux";
 import basketIcon from '../../../resources/icons/basketCard/basketicon.svg'
@@ -18,6 +19,27 @@ const BasketPage = () => {
     const [buyersComment,setBuyersComment] = useState('');
     const [nameRequired,setNameRequired] = useState(true);
     const [numberRequired,setNumberRequired] = useState(true);
+    const [offerBtn ,setOfferBtn] = useState();
+
+
+    useEffect(() => {
+        const offerScroll = () =>{
+            const offerBlock =  document.querySelector('.basketPage__mainContent_makeOrder');
+            const offerBlockPosition = offerBlock.getBoundingClientRect();
+            if(offerBlockPosition.top <= 230 && window.outerWidth <= 869){
+                setOfferBtn(true)
+            }else{
+                setOfferBtn(false)
+            }
+        }
+        window.addEventListener('scroll', offerScroll);
+        return () => {
+            window.removeEventListener('scroll', offerScroll);
+        }
+
+    }, [])
+
+
 
     function sendMail() {
         if(checkInputs()){
@@ -82,13 +104,13 @@ const BasketPage = () => {
                             {(basketItems.length !== 0) ? basketItems.map((item) => (
                                     <BasketCard key={item.productID} basketItem={item} />
                             )): <div className="basketPage__mainContent_itemsList-empty">
-                                В вашей корзине пока пусто
+                                <div>В вашей корзине пока пусто</div>
                                 <img alt="basket" src={basketIcon} />
                                 <Link to="/catalog" className="basketPage__btn basketPage__btn_empty">Сделать заказ</Link>
                                 </div>}
                         </div>
                     </div>
-                    <div className="basketPage__infoWindow">
+                    <div className={offerBtn ? "basketPage__infoWindow basketPage__infoWindow_none" : 'basketPage__infoWindow'} >
                         <div className="basketPage__infoWindow-top">
                             <div className="basketPage__infoWindow_title">Итого</div>
                             <div className="basketPage__infoWindow_fullPrice">
@@ -98,11 +120,11 @@ const BasketPage = () => {
                             </div>
                         </div>
                         <div className="basketPage__infoWindow-bottom">
-                            <div className="basketPage__infoWindow_forPay">К оплате</div>
+                            <div className="basketPage__infoWindow_forPay">К оплате:</div>
                             <div className="basketPage__infoWindow_sum">{totalAmount} руб</div>
                         </div>
                         <div className="basketPage__btn-wrapper">
-                            <button className="basketPage__btn" onClick={() => {
+                            <button className="basketPage__btn basketPage__btn_infoBtn" onClick={() => {
                                 if(!sendMail()){
                                     if(basketItems.length === 0){
                                         dispatch(openBasketModal())
@@ -141,7 +163,7 @@ const BasketPage = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="basketPage__form_field_comment">
+                                <div className="basketPage__form_field-comment">
                                     <div>Комментарий к заказу</div>
                                     <textarea
                                     type="text"

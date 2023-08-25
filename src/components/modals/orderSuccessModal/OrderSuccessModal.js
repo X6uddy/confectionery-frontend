@@ -1,5 +1,6 @@
 import React from "react";
 import './OrderSuccessModal.scss';
+import './OrderSuccessModal-media.scss';
 import { Link } from "react-router-dom";
 import closeModal from '../../../resources/icons/orderSuccessModal/closeIcon.svg'
 import { useSelector,useDispatch } from "react-redux";
