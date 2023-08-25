@@ -1,18 +1,20 @@
 .contacts {
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'b a' 'b c';
     column-gap: 100px;
     padding: 60px 0;
     justify-content: center;
     &-logo {
         align-self: center;
         justify-self: center;
-        padding-top: 30px;
+        grid-area: b;
         img {
             width: 100%;
         }
     }
     &-info {
+        grid-area: c;
         &_working {
             display: flex;
             justify-content: space-between;
@@ -31,6 +33,10 @@
         }
         &__subtitle {
             margin-bottom: 7px;
+        }
+        &__title {
+            margin: 0;
+            grid-area: a;
         }
     }
 }

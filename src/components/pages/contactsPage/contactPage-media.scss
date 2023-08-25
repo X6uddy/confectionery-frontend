@@ -1,35 +1,22 @@
 @media (max-width: 768px) {
     .contacts {
-        display: grid;
-        grid-template-columns: 270px 270px;
-        grid-template-areas: 'x z';
-        // grid-template-columns: 1fr;
         gap: 0;
         &-logo {
             width: 320px;
-            grid-area: x;
+            grid-area: b;
         }
+    }
+}
+
+@media (max-width: 684px) {
+    .contacts {
+        padding-top: 0;
+        display: grid;
+        grid-template-areas: 'a a' 'b c';
         &-info {
-            // display: grid;
-            // grid-template-areas: 'b c d';
-            &-block {
-                // &:nth-child(1) {
-                //     grid-area: a;
-                //     justify-content: center;
-                // }
-                &:nth-child(2) {
-                    grid-area: c;
-                }
-                &:nth-child(3) {
-                    grid-area: d;
-                }
-                &:nth-child(4) {
-                    grid-area: b;
-                }
+            &__title {
+                text-align: center;
             }
-            // &__title {
-            //     text-align: center;
-            // }
         }
     }
 }
@@ -37,9 +24,9 @@
 @media (max-width: 568px) {
     .contacts {
         grid-template-columns: 1fr;
-        grid-template-areas: 'z' 'x';
+        grid-template-areas: 'a' 'c' 'b';
         &-info {
-            justify-self: center;
+            padding: 0 15px;
         }
     }
 }
