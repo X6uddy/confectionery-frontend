@@ -15,8 +15,9 @@
         }
     }
 }
-@media (max-width:684px) {
+@media (max-width:750px) {
     .header {
+        position: relative;
         &__main {
             display: none;
         }
