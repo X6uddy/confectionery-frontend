@@ -20,29 +20,37 @@ const BasketPage = () => {
     const [numberRequired,setNumberRequired] = useState(true);
 
     function sendMail() {
+        if(checkInputs()){
+            dispatch(sendOrderByEmail({buyersName,buyersNumber,buyersComment}))
+            dispatch(openSuccessModal())
+            setBuyersComment('');
+            setBuyersNumber('');
+            setBuyersName('');
+            return true
+        }else{
+            return false
+        }
+    }
+    function checkInputs() {
         if(basketItems.length === 0){
             dispatch(openBasketModal())
-            return
+            return false
         }
         if(!/\S/.test(buyersName) && !/\S/.test(buyersNumber)){
             setNameRequired(false);
             setNumberRequired(false);
-            return
+            return false
         }else if (!/\S/.test(buyersName)){
             setNameRequired(false);
-            return
+            return false
         }else if(!/\S/.test(buyersNumber) || buyersNumber.replace(/\D/g,'').length !== 11){
             setNumberRequired(false);
-            return
+            return false
         }else {
             setNameRequired(true);
             setNameRequired(true)
+            return true
         }
-        dispatch(sendOrderByEmail({buyersName,buyersNumber,buyersComment}))
-        dispatch(openSuccessModal())
-        setBuyersComment('');
-        setBuyersNumber('');
-        setBuyersName('');
     }
     function onNameChange(e){
         setBuyersName(e.target.value);
@@ -50,7 +58,6 @@ const BasketPage = () => {
 
     }
     function onNumberChange(e){
-        console.log(buyersNumber.replace(/\D/g,'').length)
         setNumberRequired(true)
         setBuyersNumber(e.target.value)
     }
@@ -95,7 +102,15 @@ const BasketPage = () => {
                             <div className="basketPage__infoWindow_sum">{totalAmount} руб</div>
                         </div>
                         <div className="basketPage__btn-wrapper">
-                            <button className="basketPage__btn" onClick={() => scrollToOrder()}>Оформить заказ</button>
+                            <button className="basketPage__btn" onClick={() => {
+                                if(!sendMail()){
+                                    if(basketItems.length === 0){
+                                        dispatch(openBasketModal())
+                                    }else{
+                                        scrollToOrder()
+                                    }
+                                }
+                                }}>Оформить заказ</button>
                         </div>
                     </div>
                 </div>
