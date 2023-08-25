@@ -27,9 +27,9 @@
                     grid-area: b;
                 }
             }
-            &__title {
-                text-align: center;
-            }
+            // &__title {
+            //     text-align: center;
+            // }
         }
     }
 }
@@ -48,6 +48,13 @@
     .contacts {
         &-logo {
             width: 100%;
+        }
+        &-info {
+            &-block {
+                &__title {
+                    text-align: center;
+                }
+            }
         }
     }
 }
