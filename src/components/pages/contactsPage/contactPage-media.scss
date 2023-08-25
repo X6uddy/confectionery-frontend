@@ -1,5 +1,6 @@
 @media (max-width: 768px) {
     .contacts {
+        padding-top: 30px;
         gap: 0;
         &-logo {
             width: 320px;
@@ -10,7 +11,7 @@
 
 @media (max-width: 684px) {
     .contacts {
-        padding-top: 0;
+        padding-top: 10px;
         display: grid;
         grid-template-areas: 'a a' 'b c';
         &-info {
@@ -23,10 +24,11 @@
 
 @media (max-width: 568px) {
     .contacts {
+        width: 100%;
         grid-template-columns: 1fr;
         grid-template-areas: 'a' 'c' 'b';
         &-info {
-            padding: 0 15px;
+            padding-left: 15px;
         }
     }
 }
@@ -37,10 +39,12 @@
             width: 100%;
         }
         &-info {
-            &-block {
-                &__title {
-                    text-align: center;
-                }
+            &__title {
+                text-align: center;
+                font-size: 25px;
+            }
+            &__subtitle {
+                font-size: 17px;
             }
         }
     }
