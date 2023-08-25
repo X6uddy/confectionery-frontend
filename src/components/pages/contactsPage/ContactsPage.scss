@@ -1,0 +1,36 @@
+.contacts {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    column-gap: 70px;
+    padding-bottom: 25px;
+    justify-content: center;
+    &-logo {
+        align-self: center;
+        justify-self: center;
+        padding-top: 30px;
+        img {
+            width: 100%;
+        }
+    }
+    &-info {
+        &_working {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            &-days p, &-hours p{
+                margin: 0;
+                margin-bottom: 5px;
+            }
+        }
+        &__descr {
+            margin: 0;
+            a {        
+                color: black;
+                text-decoration: none;
+            }
+        }
+        &__subtitle {
+            margin-bottom: 7px;
+        }
+    }
+}

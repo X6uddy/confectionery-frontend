@@ -1,97 +1,41 @@
 @media (max-width: 1200px) {
-    .mySwiper {
-        width: 950px;
+    .slider {
+        &__photo {
+            width: 350px;
+            height: 350px;
+        }
     }
 }
 
 @media (max-width: 992px) {
-    .mySwiper {
-        width: 740px;
-    }
+
+}
+
+@media (max-width: 768px) {
     .slider {
-        &-block figure figcaption {
-            background: rgba(109, 92, 57, 0.432);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        &__photo {
+            width: 300px;
+            height: 300px;
         }
-        &-block figure {
-            position: relative;
-            z-index: 1;
-            display: inline-block;
-            overflow: hidden;
-            // background: rgba(109, 92, 57, 0.6509803922);
-            text-align: center;
-            cursor: pointer;
-        }
-    }
-    figure.slider-wrapper {
-        h3 {
-            font-size: 18px;
-            left: 10px;
-            bottom: 20px
-        }
-        h3::after {
-            opacity: 1;
-            transform: translate3d(0, 0, 0)
+        &__title {
+            font-size: 25px;
         }
     }
 }
 
-@media (max-width: 768px) and (min-width: 630px) {
-    .mySwiper {
-        width: 490px;
-        // height: 360px;
-    }
-    .slider {
+@media (max-width: 576px){
 
-    }
-}
-
-@media (max-width: 630px) {
-    .mySwiper {
-        width: 550px;
-        // height: 300px;
-    }
-    figure.slider-wrapper {
-        img {
-            height: 370px;
-        }
-        h3 {
-            left: 5px;
-            font-size: 15px;
-            bottom: 20px;
-        }
-    }
-}
-
-@media (max-width: 576px) and (min-width: 430px) {
-    .mySwiper {
-        width: 420px;
-        // height: 730px;
-    }
-    .slider {
-
-    }
-    figure.slider-wrapper img {
-        height: 370px;
-    }
 }
 
 @media (max-width: 430px) {
-    .mySwiper {
-        width: 350px;
-    }
-    figure.slider-wrapper {
-        img {
-            height: 350px;
+    .slider {
+        &__photo {
+            width: 200px;
+            height: 200px;
         }
-        h3 {
-            left: 5px;
-            font-size: 15px;
-            bottom: 20px;
+        &__descr {
+            font-size: 14px;
+            bottom:10px;
         }
     }
 }
