@@ -26,5 +26,15 @@
                 }
             }
         }
+        &__map{
+           height: 300px;
+        }
+    }
+}
+@media (max-width: 768px){
+    .delivery {
+        &__map{
+            height: 250px;
+         }
     }
 }

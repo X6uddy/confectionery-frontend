@@ -1,12 +1,15 @@
-import YandexMap from '../../modals/mapModal/YandexMap';
+import React from 'react';
 
 import bicycle from '../../../resources/img/DeliveryAndPaymentPage/bicycle.png';
 import logo from '../../../resources/img/DeliveryAndPaymentPage/logo_img.png';
+import YandexMapDelivery from './yandexMapDelivery';
 
 import './deliveryAndPaymentPage.scss';
 import './deliveryAndPaymentPage-media.scss';
 
 const DeliveryAndPaymentPage = () => {
+
+
     return (
         <div className="delivery">
             <div className="container">
@@ -50,7 +53,7 @@ const DeliveryAndPaymentPage = () => {
                     <div className="delivery-block__image"><img src={logo} alt="logo" /></div>
                 </div>
 
-                <YandexMap />
+                <YandexMapDelivery />
             </div>
         </div>
     )
