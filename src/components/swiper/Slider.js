@@ -49,17 +49,53 @@ const Slider = () => {
                         }
                     }}
                     loop={true}
-                    speed={4000}
+                    speed={6000}
                     spaceBetween= {10}
-                    centeredSlides={true}
+                    // centeredSlides={true}
                     autoplay={{
                         delay: 100,
-                        disableOnInteraction: true,
+                        disableOnInteraction: false,
                     }}
                     navigation={false}
                     modules={[Autoplay, Navigation]}
                     className="mySwiper"
                 >
+                    <SwiperSlide>
+                        <Link to={`/catalog/${233}`}>
+                            <img className="slider__photo" alt="sliderPhoto"  src={photo233}/>
+                            <div className="slider__descr">Пирожное "Тирамису"</div>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to={`/catalog/${77}`}>
+                            <img className="slider__photo" alt="sliderPhoto"  src={photo77}/>
+                            <div className="slider__descr">Кольцо с творожной начинкой</div>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to={`/catalog/${62}`}>
+                            <img className="slider__photo" alt="sliderPhoto"  src={photo62}/>
+                            <div className="slider__descr">"Творожный с изюмом"</div>       
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to={`/catalog/${73}`}>
+                            <img className="slider__photo" alt="sliderPhoto"  src={photo73}/>
+                            <div className="slider__descr">"Язык с сахаром"</div>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to={`/catalog/${300}`}>
+                            <img className="slider__photo" alt="sliderPhoto"  src={photo300}/>
+                            <div className="slider__descr">"Безе воздушное"</div>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to={`/catalog/${127}`}>
+                            <img className="slider__photo" alt="sliderPhoto"  src={photo127}/>
+                            <div className="slider__descr">"Рогалик с варёной сгущенкой"</div>
+                        </Link>
+                    </SwiperSlide>
                     <SwiperSlide>
                         <Link to={`/catalog/${233}`}>
                             <img className="slider__photo" alt="sliderPhoto"  src={photo233}/>
