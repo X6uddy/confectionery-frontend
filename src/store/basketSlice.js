@@ -22,7 +22,9 @@ const setItemFunc = (item, totalAmount, totalQuantity) => {
 const initialState = {
     basketItems: items,
     totalAmount: totalAmount,
-    totalQuantity: totalQuantity
+    totalQuantity: totalQuantity,
+    basketModal: false,
+    orderSuccessModal:false,
 }
 
 const basketSlice = createSlice({
@@ -65,18 +67,15 @@ const basketSlice = createSlice({
               );
 
         },
-        //we give id for remove
         removeItem(state,action) {
 
             const productID = action.payload;
             const existingItem = state.basketItems.find((item) => item.productID === productID);
 
-            if(existingItem.quantity === 1){
-                state.basketItems = state.basketItems.filter((item) => item.productID !== productID);
-            }else {
+           if(existingItem){
                 existingItem.quantity--;
-                existingItem.totalPrice = Number(existingItem.totalPrice) - Number(existingItem.priceForOne) ;
-            }
+                existingItem.totalPrice = Number(existingItem.totalPrice) - Number(existingItem.priceForOne);
+           }
 
             state.totalAmount = state.basketItems.reduce(
                 (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
@@ -125,14 +124,8 @@ const basketSlice = createSlice({
             const existingItem = state.basketItems.find((item) => item.productID === productID);
             
             if(existingItem){
-                if(Number(quantityInput) === 0 || Number(quantityInput) < 0 || quantityInput === ''){
-                    state.basketItems = state.basketItems.filter((item) => item.productID !== productID);
-                }
-                else{
-                    existingItem.quantity = Number(quantityInput);
-                    existingItem.totalPrice = Number(quantityInput) * Number(existingItem.price);
-                }
-                
+                existingItem.quantity = Number(quantityInput);
+                existingItem.totalPrice = Number(quantityInput) * Number(existingItem.price);
             }
 
 
@@ -146,14 +139,59 @@ const basketSlice = createSlice({
                 0
             );
             
-
             setItemFunc(
                 state.basketItems.map((item) => item),
                 state.totalAmount,
                 state.totalQuantity
             );
+        },
+        sendOrderByEmail(state,action){
+            const buyersName = action.payload.buyersName;
+            const buyersNumber = action.payload.buyersNumber;
+            const buyersComment = action.payload.buyersComment;
+
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ buyersName,buyersComment,buyersNumber, order: state.basketItems, orderPrice: state.totalAmount})
+            };
+            fetch('http://127.0.0.1:3004/mail/sendOrder', requestOptions)
+            .catch(err => console.log(err));
+
+            state.basketItems = [];
+            state.totalAmount = 0;
+            state.totalQuantity = 0;
+            
+            setItemFunc(
+                state.basketItems.map((item) => item),
+                state.totalAmount,
+                state.totalQuantity
+            );
+
+        },
+        openBasketModal(state,action) {
+            state.basketModal = true
+        },
+        closeBasketModal(state,action){
+            state.basketModal = false
+        },
+        openSuccessModal(state,action) {
+            state.orderSuccessModal = true
+        },
+        closeSuccessModal(state,action){
+            state.orderSuccessModal = false
         }
     },
 });
-export const {addItem, removeItem, deleteItem, setInputState} = basketSlice.actions;
+export const {
+    addItem,
+    removeItem,
+    deleteItem,
+    setInputState,
+    sendOrderByEmail,
+    openBasketModal,
+    closeBasketModal,
+    openSuccessModal,
+    closeSuccessModal,
+    } = basketSlice.actions;
 export default basketSlice.reducer;

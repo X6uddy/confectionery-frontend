@@ -1,6 +1,6 @@
 .basketPage {
     background-color: #F7F7F7;
-    padding: 35px 0 50px 0;
+    padding: 35px 0px 50px 0px;
     &__title {
         color: #292929 ;
         text-align: center;
@@ -9,6 +9,7 @@
         font-style: normal;
         font-weight: 600;
         margin-bottom: 10px;
+        padding-top: 10px;
     }
     &__describe {
         color: #292929;
@@ -27,8 +28,9 @@
     }
     &__mainContent {
         &_makeOrder {
-            width: 660px;
+            max-width: 660px;
             margin: 0 auto;
+            padding:  0 10px;
         }
         &_itemsList{
             width: 670px;
@@ -213,7 +215,7 @@
             margin-bottom: 30px;
         }
         &_field {
-            &_comment {
+            &-comment {
                 div{
                     color: #292929;
                     font-family: PTSans-Regular;
@@ -247,13 +249,29 @@
             input {
                 font-family: PTSans-Regular;
                 padding-left: 15px;
-                width: 325px;
+                width: 316px;
                 height: 50px;
                 background-color: #fff;
                 border: 1px solid #EDEDF0;
                 border-radius: 5px;
                 outline: none;
+                &::-webkit-inner-spin-button,
+                ::-webkit-outer-spin-button{
+                    -webkit-appearance: none;
+                }
             }
+        }
+    }
+    &__privacyPolicy {
+        color: #000;
+        font-family: PTSans-Regular;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 18px;
+        &_link {
+            color: #4E9DD3;
+            text-decoration: none;
+            border-bottom: 1px solid #4E9DD3 ;
         }
     }
 }

@@ -1,0 +1,23 @@
+@media (max-width:672px) {
+    .basketCard {
+        position: relative;
+        width: 100%;
+        min-height: 130px;
+        &__infoBlock {
+            align-items: center;
+            &-wrapper {
+                position: static;
+                flex-direction: column;
+            }
+            &_amount {
+                left: 67px;
+                bottom: 13px;
+            }
+        }
+        &__img {
+            position: relative;
+            width: 70px;
+            height: 70px;
+        }
+    }
+}

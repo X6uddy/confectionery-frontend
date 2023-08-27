@@ -1,12 +1,13 @@
 .delivery {
     background-color: #F7F7F7;
+    padding: 30px 10px;
     &-block {
         display: grid;
         grid-template: 1fr / 1fr 1fr;
         grid-template-areas:
             '. a'
             'b c';
-        padding: 105px 0 65px 0;
+        padding: 75px 0 65px 0;
         &_title {
             grid-area: a;
             span {
@@ -20,7 +21,6 @@
         &_descr {
             grid-area: c;
             p {
-                // font-family: Proxima Nova;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -43,12 +43,17 @@
         &__image {
             text-align: center;
             align-items: center;
-            img {
-                // width: 100%;
-            }
         }
         &__descr {
             padding: 0 10px;
         }
+    }
+    &__map{
+        width: 100%;
+        height: 390px;
+        border: 1px solid rgba($color: #000000, $alpha: .5);
+        border-radius: 5px;
+        overflow: hidden;
+        margin:  0 auto;
     }
 }

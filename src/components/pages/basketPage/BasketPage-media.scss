@@ -1,0 +1,150 @@
+@media (max-width: 1179px) {
+    .basketPage {
+        &-wrapper{
+            justify-content: space-around;
+        }
+        &__infoWindow {
+            width: 380px;
+        }
+        &__btn{
+            &-wrapper {
+                padding: 20px 20px;
+            }
+        }
+        &__mainContent {
+            &_itemsList {
+                width: 600px;
+            }
+        }
+    }
+}
+@media (max-width: 1005px) {
+    .basketPage {
+        &__infoWindow {
+            width: 300px;
+        }
+        &__btn{
+            &-wrapper {
+                padding: 15px 20px;
+            }
+            &_infoBtn{
+                width: 210px;
+            }
+        }
+        &__mainContent {
+            &_itemsList {
+                max-width: 540px;
+            }
+        }
+    }
+}
+@media (max-width: 869px) {
+    .basketPage {
+        &__infoWindow {
+            position: fixed;
+            display: flex;
+            width: 100%;
+            z-index: 15;
+            border: none;
+            border-top: 1px solid rgba($color: #000000, $alpha: .4);
+            border-radius: 0;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            top: auto;
+            bottom: 0;
+            &_none {
+                display: none;
+            }
+            &-top {
+                display: none;
+            }
+            &-bottom {
+                min-width: 150px;
+                border: none;
+            }
+            &_forPay {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 672px) {
+    .basketPage {
+        &__infoWindow {
+            &-bottom {
+                flex-direction: column;
+            }
+        }
+        &__form {
+            input {
+                width: 100%;
+            }
+            &-wrapper {
+                flex-direction: column;
+            }
+        }
+        &__mainContent {
+            padding: 0 10px;
+            &_itemsList {
+                max-width: 430px;
+            }
+        }
+    }
+}
+@media (max-width: 452px) {
+    .basketPage {
+        &__title {
+            font-size: 25px;
+        }
+        &__btn{
+            &_mainContent {
+                width: 200px;
+            }
+            &_infoBtn{
+                width: 160px;
+            }
+        }
+        &__mainContent {
+            &_itemsList {
+                max-width: 350px;
+                &-empty {
+                    height: 450px;
+                    div {
+                        position: absolute;
+                        bottom: 100px;
+                    }
+                    img {
+                        width: 250px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 378px) {
+    .basketPage {   
+        &__mainContent {
+            &_itemsList {
+                max-width: 300px;
+                &-empty {
+                    height: 350px;
+                    div {
+                        position: absolute;
+                        bottom: 100px;
+                    }
+                    img {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+        &__btn{
+            &_infoBtn{
+                width: 140px;
+            }
+        }
+    }
+}

@@ -25,13 +25,13 @@ const CatalogPage = () => {
             }else{
                 setArrowVisable(false)
             }
-        }
-        window.addEventListener('scroll', arrowScroll)
+        };
+        window.addEventListener('scroll', arrowScroll);
         if(skip === 0) {
             dispatch(fetchProducts(skip))
             dispatch(loadNextProducts())
             dispatch(fetchSumProducts())
-        }
+        };
 
         return () => {
             window.removeEventListener('scroll', arrowScroll);
