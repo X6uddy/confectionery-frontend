@@ -1,0 +1,39 @@
+import React from "react";
+
+import './VacancyPage.scss';
+
+
+import VacancyCard from "../../vacancyCard/VacancyCard";
+import { useGetAllVacanciesQuery } from "../../../store/vacanciesApiSlice";
+
+
+import error503 from '../../../resources/img/vacancyPage/error503.jpg';
+import Spinner from "../../spinner/Spinner";
+
+
+const VacancyPage = () => {
+    const {data: vacancies = [], error, isLoading} = useGetAllVacanciesQuery();
+
+    console.log()
+    
+
+    return(
+        <>
+        <div className="vacancy">
+            <div className="container">
+                <div className="vacancy__title">Открытые вакансии</div>
+                <div className="vacancy__list">
+                    { error ? <img alt="error503" style={{width: '100%'}} src={error503} /> : ''}
+                    { isLoading ? <Spinner />: ''}
+                    {vacancies.map((item) => {
+                        return (
+                            <VacancyCard key={item._id} vacancyData={item} />
+                        )
+                    })}
+                </div>
+            </div>
+        </div>
+        </>
+    )
+}
+export default VacancyPage
