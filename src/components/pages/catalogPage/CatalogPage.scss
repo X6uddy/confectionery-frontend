@@ -17,33 +17,6 @@
         cursor: pointer;
         transition: all 0.5s;
     }
-    &__filter {
-        width: 100%;
-        &-wrapper {
-            display: flex;
-            margin-top: 40px;
-            padding: 0 40px;
-        }
-        &_item {
-            cursor: pointer;
-            padding: 10px 10px;
-            border-radius: 20px;
-            background-color: #F7EBE5;
-            margin-right: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            span {
-                font-family: Montserrat;
-                font-size: 17px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                color: rgba(41, 41, 41, 0.83);
-            }
-        }
-        
-    }
     &__products {
         &-wrapper{
             padding: 0 40px ;
