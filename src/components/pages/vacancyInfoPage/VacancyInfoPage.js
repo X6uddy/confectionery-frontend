@@ -27,8 +27,8 @@ const VacancyInfoPage = () => {
                 {isLoading ? <Spinner />: ''}
                 {error ? <img alt='error' src={error503} /> : ''}
                 {vacancyInfo.map((infoItem) => {
+                    
                     const {title, requirements, duties, conditions, salary, description} = infoItem;
-                    console.log(duties)
 
                     return (
                         <>

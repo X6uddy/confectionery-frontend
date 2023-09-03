@@ -1,6 +1,8 @@
 import React from "react";
 
 import './VacancyPage.scss';
+import './VacancyPage-media.scss';
+
 
 
 import VacancyCard from "../../vacancyCard/VacancyCard";
