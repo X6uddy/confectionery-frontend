@@ -9,13 +9,7 @@
                 margin-top: 50px;
                 width: 90%;
             }
-        }
-        &__filter{
-            &-wrapper {
-                justify-content: center;
-            }
-        }        
-
+        }       
     }
 }
 @media (max-width: 1179px) {
@@ -36,17 +30,6 @@
     .catalog {
         &__arrowUp{
             display: none;
-        }
-    }
-}
-@media (max-width: 370px) {
-    .catalog {
-        &__filter{
-            &_item{
-                span {
-                    font-size: 14px;
-                }
-            }
         }
     }
 }
