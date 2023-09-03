@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import './VacancyInfoPage.scss';
+import './VacancyInfoPage-media.scss';
 
 import { useGetSingleVacancyQuery } from '../../../store/vacanciesApiSlice';
 import Spinner from '../../spinner/Spinner';
@@ -28,10 +29,10 @@ const VacancyInfoPage = () => {
                 {error ? <img alt='error' src={error503} /> : ''}
                 {vacancyInfo.map((infoItem) => {
                     
-                    const {title, requirements, duties, conditions, salary, description} = infoItem;
+                    const {title, requirements, duties, conditions, salary, description, _id} = infoItem;
 
                     return (
-                        <>
+                        <div key={_id}>
                         <div className="vacancyInfo__card">
                             <div className="vacancyInfo__title">{title}</div>
                             <div className="vacancyInfo__salary">От {salary} руб.</div>
@@ -42,9 +43,9 @@ const VacancyInfoPage = () => {
                         <div className="vacancyInfo__block">
                             <div className="vacancyInfo__block_title">Обязанности:</div>
                             <ul className="vacancyInfo__block_list">
-                                {duties.map((item) => {
+                                {duties.map((item, index) => {
                                     return(
-                                        <li>{item}</li>
+                                        <li key={`duty-${index}`}>{item}</li>
                                     )
                                 })}
                             </ul>
@@ -52,9 +53,9 @@ const VacancyInfoPage = () => {
                         <div className="vacancyInfo__block">
                             <div className="vacancyInfo__block_title">Требования:</div>
                             <ul className="vacancyInfo__block_list">
-                                {requirements.map((item) => {
+                                {requirements.map((item,index) => {
                                         return(
-                                            <li>{item}</li>
+                                            <li key={`requirement-${index}`}>{item}</li>
                                         )
                                     })}
                             </ul>
@@ -62,15 +63,15 @@ const VacancyInfoPage = () => {
                         <div className="vacancyInfo__block">
                             <div className="vacancyInfo__block_title">Условия:</div>
                             <ul className="vacancyInfo__block_list">
-                            {conditions.map((item) => {
+                            {conditions.map((item, index) => {
                                     return(
-                                        <li>{item}</li>
+                                        <li key={`condition-${index}`}>{item}</li>
                                     )
                                 })}
                             </ul>
                         </div>
                     </div>
-                    </>
+                    </div>
                     )
                 })}
                 <div className="vacancyInfo__contacts">

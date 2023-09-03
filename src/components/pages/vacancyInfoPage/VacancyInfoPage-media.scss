@@ -1,0 +1,44 @@
+@media (max-width: 600px) {
+    .vacancyInfo {
+        &__title {
+            font-size: 25px;
+        }
+        &__salary {
+            font-size: 20px;
+        }
+        &__descr {
+            font-size: 16px;
+        }
+        &__call {
+            font-size: 20px;
+            width: 170px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .vacancyInfo {
+        &__title {
+            font-size: 20px;
+        }
+        &__salary {
+            font-size: 15px;
+        }
+        &__descr {
+            font-size: 14px;
+        }
+        &__call {
+            font-size: 20px;
+            width: 170px;
+        }
+        &__block {
+            &_title {
+                font-size: 17px;
+            }
+            &_list {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

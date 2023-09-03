@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .vacancyCard {
     background-color: #FFFFFF;
     border: 1px solid #D8D8D8;
@@ -18,6 +20,11 @@
             color: #292929;
             font-family: Montserrat;
             font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover {
+                color: $main-color;
+            }
         }
         &_salary{
             font-size: 20px;
@@ -50,13 +57,13 @@
                 justify-content: center;
                 align-items: center;
                 padding-bottom: 3px;
-                border: 1px solid #41BFBF;
-                color: #41BFBF;
+                border: 1px solid $main-color;
+                color: $main-color;
                 cursor: pointer;
                 &:hover {
                     color: #FFFFFF;
                     border: 1px solid #FFFFFF;
-                    background-color: #41BFBF;
+                    background-color: $main-color;
                 }
 
             }
@@ -68,17 +75,17 @@
                 padding-bottom: 3px;
                 width: 100px;
                 height: 30px;
-                border: 1px solid #41BFBF;
+                border: 1px solid $main-color;
                 border-radius: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: #41BFBF;
+                color: $main-color;
                 cursor: pointer;
                 &:hover {
                     color: #FFFFFF;
                     border: 1px solid #FFFFFF;
-                    background-color: #41BFBF;
+                    background-color: $main-color;
                 }
             }
         }

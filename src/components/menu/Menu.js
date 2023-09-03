@@ -42,9 +42,9 @@ const Menu = () => {
                             </NavLink>
                         </li>
                         <li className='menu__nav-item' onClick={() => dispatch(closeMenu())}>
-                            <NavLink to="/story" className={({isActive}) => isActive? 'menu__nav_link activeLinkMenu':'menu__nav_link'}>
+                            <NavLink to="/vacancy" className={({isActive}) => isActive? 'menu__nav_link activeLinkMenu':'menu__nav_link'}>
                                     <img className='menu__nav_muffin' alt='muffinicon' src={muffinIcon} />
-                                    <div className='menu__nav-ref'>Наша история</div>
+                                    <div className='menu__nav-ref'>Вакансии</div>
                             </NavLink>
                         </li>
                         <li className='menu__nav-item' onClick={() => dispatch(closeMenu())}>

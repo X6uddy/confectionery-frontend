@@ -1,3 +1,5 @@
+@import '../../../style/variables.scss';
+
 .basketPage {
     background-color: #F7F7F7;
     padding: 35px 0px 50px 0px;
@@ -90,7 +92,7 @@
         display: block;
         width: 250px;
         height: 50px;
-        background-color: #41BFBF;
+        background-color: $main-color;
         border: none;
         border-radius: 3px;
         color: #fff;
@@ -111,10 +113,14 @@
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            border: 1px solid #984b46;
+            border: 1px solid $main-color;
             color: #000;
             background-color: #fff;
             width: 200px;
+            &:focus {
+                background-color: rgba($color: $main-color, $alpha: .3);
+                color: #000;
+            }
         }
         &:active {
             opacity: 0.8;
