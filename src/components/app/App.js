@@ -13,6 +13,7 @@ const CatalogPage = lazy(() => import('../pages/catalogPage/CatalogPage'));
 const SingleProductPage = lazy(() => import('../pages/singleProductPage/SingleProductPage'));
 const BasketPage = lazy(() => import('../pages/basketPage/BasketPage'));
 const PrivacyPolicyPage = lazy(() => import('../pages/privacyPolicyPage/PrivacyPolicyPage'));
+const VacancyInfoPage = lazy(() => import('../pages/vacancyInfoPage/VacancyInfoPage'));
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
                     <Route path='/' element={<Dashboard />}>
                         <Route index element={<MainPage/>}/>
                         <Route path="vacancy" element={<VacancyPage />} />
+                        <Route path="vacancy/:id" element={<VacancyInfoPage />} />
                         <Route path="contacts" element={<ContactsPage />} />
                         <Route path="deliveryAndPayment" element={<DeliveryAndPaymentPage />} />
                         <Route path="catalog" element={<CatalogPage />} />

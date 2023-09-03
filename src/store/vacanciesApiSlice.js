@@ -9,7 +9,11 @@ const vacanciesApiSlice = createApi({
             query: () => 'vacancies',
             method: 'GET',
         }),
+        getSingleVacancy: builder.query({
+            query: (id) => `vacancies/${id}`,
+            method: 'GET',
+        })
     })
 });
 export { vacanciesApiSlice }
-export const {useGetAllVacanciesQuery} = vacanciesApiSlice;
+export const {useGetAllVacanciesQuery,useGetSingleVacancyQuery} = vacanciesApiSlice;

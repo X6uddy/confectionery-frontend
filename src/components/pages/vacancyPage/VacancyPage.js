@@ -12,10 +12,8 @@ import Spinner from "../../spinner/Spinner";
 
 
 const VacancyPage = () => {
-    const {data: vacancies = [], error, isLoading} = useGetAllVacanciesQuery();
 
-    console.log()
-    
+    const {data: vacancies = [], error, isLoading} = useGetAllVacanciesQuery();
 
     return(
         <>
