@@ -1,0 +1,27 @@
+version: '3'
+services:
+  frontend:
+    image: frontImage
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      REACT_APP_API_URL: http://backend:3004
+
+  backend:
+    image: backImage
+    ports:
+      - "3004:3004" 
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/confectionaryDB 
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017" 
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

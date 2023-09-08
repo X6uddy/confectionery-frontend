@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const vacanciesApiSlice = createApi({
     reducerPath: 'vacanciesApi',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://127.0.0.1:3004/'}),
+    baseQuery: fetchBaseQuery({baseUrl: `${backendApi}/`}),
     endpoints: (builder) => ({
         getAllVacancies: builder.query({
             query: () => 'vacancies',
