@@ -4,6 +4,9 @@ WORKDIR /confectionary-frontend
 
 COPY package*.json ./
 
+ARG REACT_APP_API_URL = development
+ENV REACT_APP_API_URL=${REACT_APP_API_URL}
+
 RUN npm install
 
 COPY . .
