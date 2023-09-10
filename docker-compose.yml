@@ -1,7 +1,7 @@
 version: '3'
 services:
   frontend:
-    image: frontImage
+    build: ./confectionery-frontend #путь до директорий для создания образа
     ports:
       - "80:80"
     depends_on:
@@ -10,7 +10,7 @@ services:
       REACT_APP_API_URL: http://backend:3004
 
   backend:
-    image: backImage
+    build: ./confectionery-backend
     ports:
       - "3004:3004" 
     environment:
