@@ -22,7 +22,7 @@ import photo127 from './img/127.jpg';
 const Slider = () => {
 
     return(
-        // <div className="slider">
+        <div className="slider">
             <div className="container">
                 <h2 className="slider__title">Популярные изделия</h2>
                 <Swiper
@@ -134,7 +134,7 @@ const Slider = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-        // </div>
+        </div>
     )
 }
 export default Slider;
