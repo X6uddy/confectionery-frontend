@@ -4,7 +4,7 @@ import bicycle from '../../../resources/img/DeliveryAndPaymentPage/bicycle.png';
 import logo from '../../../resources/img/DeliveryAndPaymentPage/logo_img.png';
 import YandexMapDelivery from './yandexMapDelivery';
 
-import './deliveryAndPaymentPage.scss';
+import './DeliveryAndPaymentPage.scss';
 import './deliveryAndPaymentPage-media.scss';
 
 const DeliveryAndPaymentPage = () => {

@@ -2,7 +2,7 @@ import React from "react";
 
 import logo from '../../../resources/img/contacts/logo_img.png';
 
-import './contactsPage.scss';
+import './ContactsPage.scss';
 import './contactPage-media.scss';
 
 const ContactsPage = () => {

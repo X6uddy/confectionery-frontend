@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './ProductCard.scss';
+import './productCard.scss';
 import './ProductCard-media.scss';
 import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
 import { Link } from "react-router-dom";
