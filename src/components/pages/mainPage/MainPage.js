@@ -20,8 +20,8 @@ const MainPage = () => {
                             <img src={promoImg} alt="promoImg" />
                         </div>
                         <div className="promo__wrapper">
-                            <h1 className="promo__title">ИП Курушин О.А</h1>
-                            <p className="promo__since">— 2010 —</p>
+                            <h1 className="promo__title">ИП Курушин А.О</h1>
+                            <p className="promo__since">— 2001 —</p>
                             <p className="promo__descr">Откройте дверь в мир вкусовой гармонии, чтобы сделать каждый день незабываемым</p>
                         </div>
                     </div>

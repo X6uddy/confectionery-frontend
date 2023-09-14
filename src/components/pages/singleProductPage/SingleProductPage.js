@@ -45,17 +45,17 @@ const SingleProductPage = () => {
     const spinner = isLoading ? <Spinner/> : null;
 
     return(
-        <>
         <div className="single">
             {errorMessage}
             {spinner}
             {product.map(item => {
-                const {title, photoPath, proteins, fats, carbohydrates, energy, expiration, price, composition, _id, description} = item;
+                const {title, photoPath, proteins, fats, carbohydrates, energy, expiration, price, composition, _id, description, box_weight} = item;
                 const tabs = [
-                    { title: 'Срок годности', content: `При хранении в холодильнике: ${expiration} суток` },
-                    { title: 'Состав', content: `${composition}` },
+                    // { title: 'Срок годности', content: `При хранении в холодильнике: ${expiration} суток` },
+                    // { title: 'Состав', content: `${composition}` },
                     { title: 'Пищевая ценность', content: `На 100г: белки: ${proteins}, жиры: ${fats}, углеводы: ${carbohydrates}.`},
-                    { title: 'Энергетическая ценность', content: `${energy} ккал`},
+                    { title: 'Вес коробки', content: `Вес продукции в коробке: ${box_weight} кг`}
+                    // { title: 'Энергетическая ценность', content: `${energy} ккал`},
                 ]
                 return (
                     <div key={_id} className="container">
@@ -124,7 +124,6 @@ const SingleProductPage = () => {
                 )
             })}
         </div>
-        </>
     )
 }
 export default SingleProductPage
