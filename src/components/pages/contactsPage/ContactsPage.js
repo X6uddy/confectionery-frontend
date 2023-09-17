@@ -47,9 +47,8 @@ const ContactsPage = () => {
                         </div>
 
                         <div className="contacts-info-block">
-                            <h3 className="contacts-info__subtitle">Телефоны:</h3>
-                            <p className="contacts-info__descr"><a href="tel:+79084798406">+7 (908) 479-84-06</a></p>
-                            <p className="contacts-info__descr"><a href="tel:+79084798406">+7 (908) 479-84-06</a></p>
+                            <h3 className="contacts-info__subtitle">Телефон:</h3>
+                            <p className="contacts-info__descr"><a href="tel:+79050366380">+7 (905) 036-63-80</a></p>
                         </div>
                     </div>
                 </div>

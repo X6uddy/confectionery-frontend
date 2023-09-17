@@ -79,7 +79,7 @@ const VacancyInfoPage = () => {
                     <div className="vacancyInfo__contacts-wrapper">
                         <div className="vacancyInfo__contacts_block">
                             <img src={phone} alt="phone number" />
-                            <div>8 (908) 345-99-99</div>
+                            <div>8 (905) 036-63-80</div>
                         </div>
                         <div className="vacancyInfo__contacts_block">
                             <img src={emailIcon} alt="email" />

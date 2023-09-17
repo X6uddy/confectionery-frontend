@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
-import './ProductCard.scss';
-import './ProductCard-media.scss';
-import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
+
 import { Link } from "react-router-dom";
 import { addItem } from "../../store/basketSlice";
 import { useDispatch,useSelector } from "react-redux";
-import inBasket from '../../resources/icons/productCard/tip.svg'
+
+import './ProductCard.scss';
+import './ProductCard-media.scss';
+
+
+import inBasket from '../../resources/icons/productCard/tip.svg';
+import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
+
 
 
 

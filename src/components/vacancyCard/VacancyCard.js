@@ -17,7 +17,7 @@ const VacancyCard = ({vacancyData}) => {
                 </div>
                 <div className="vacancyCard__info_descr">{description}</div>
                 <div className="vacancyCard__info_buttons">
-                    <a href="tel: +78889993344"  className="vacancyCard__info_buttons-call">Позвонить</a>
+                    <a href="tel: +79050366380"  className="vacancyCard__info_buttons-call">Позвонить</a>
                     <Link to={`/vacancy/${_id}`}className="vacancyCard__info_buttons-infoPage">Подробнее</Link>
                 </div>
             </div>
