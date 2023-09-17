@@ -13,7 +13,7 @@ const VacancyCard = ({vacancyData}) => {
             <div className="vacancyCard__info">
                 <div className="vacancyCard__info_top">
                     <Link to={`/vacancy/${_id}`} className="vacancyCard__info_title">{title}</Link>
-                    <div className="vacancyCard__info_salary">от {salary} руб.</div>
+                    <div className="vacancyCard__info_salary">{salary}</div>
                 </div>
                 <div className="vacancyCard__info_descr">{description}</div>
                 <div className="vacancyCard__info_buttons">

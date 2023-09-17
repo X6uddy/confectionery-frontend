@@ -35,12 +35,12 @@ const VacancyInfoPage = () => {
                         <div key={_id}>
                         <div className="vacancyInfo__card">
                             <div className="vacancyInfo__title">{title}</div>
-                            <div className="vacancyInfo__salary">От {salary} руб.</div>
+                            <div className="vacancyInfo__salary">{salary}</div>
                             <div className="vacancyInfo__descr">{description}</div>
                             <a href="tel: +78889993344" className="vacancyInfo__call">Позвонить</a>
                         </div>
-                    <div className="vacancyInfo__blocks">
-                        <div className="vacancyInfo__block">
+                     <div className="vacancyInfo__blocks">
+                     {(duties.length !== 0) && <div className="vacancyInfo__block">
                             <div className="vacancyInfo__block_title">Обязанности:</div>
                             <ul className="vacancyInfo__block_list">
                                 {duties.map((item, index) => {
@@ -49,8 +49,8 @@ const VacancyInfoPage = () => {
                                     )
                                 })}
                             </ul>
-                        </div>
-                        <div className="vacancyInfo__block">
+                        </div>}
+                        {(requirements.length !== 0) && <div className="vacancyInfo__block">
                             <div className="vacancyInfo__block_title">Требования:</div>
                             <ul className="vacancyInfo__block_list">
                                 {requirements.map((item,index) => {
@@ -59,8 +59,8 @@ const VacancyInfoPage = () => {
                                         )
                                     })}
                             </ul>
-                        </div>
-                        <div className="vacancyInfo__block">
+                        </div>}
+                        {(conditions.length !== 0) && <div className="vacancyInfo__block">
                             <div className="vacancyInfo__block_title">Условия:</div>
                             <ul className="vacancyInfo__block_list">
                             {conditions.map((item, index) => {
@@ -69,7 +69,7 @@ const VacancyInfoPage = () => {
                                     )
                                 })}
                             </ul>
-                        </div>
+                        </div>}
                     </div>
                     </div>
                     )
