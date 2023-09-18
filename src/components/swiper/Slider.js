@@ -27,31 +27,61 @@ const Slider = () => {
                 <h2 className="slider__title">Популярные изделия</h2>
                 <Swiper
                     breakpoints={{
+                        100: {
+                            slidesPerView: 1, 
+                            spaceBetween: 160,
+                        },
                         300: {
                             slidesPerView: 1, 
-                            spaceBetween: 10,
+                            spaceBetween: 120,
                         },
-                        576: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 2,
+                        390: {
+                            slidesPerView: 1, 
                             spaceBetween: 30,
+                        },
+                        470: {
+                            slidesPerView: 2,
+                            spaceBetween: 350,
+                        },
+                        575: {
+                            slidesPerView: 2,
+                            spaceBetween: 250,
+                        },
+                        670: {
+                            slidesPerView: 2,
+                            spaceBetween: 200,
+                        },
+                        750: {
+                            slidesPerView: 2,
+                            spaceBetween: 70,
+                        },
+                        880: {
+                            slidesPerView: 3,
+                            spaceBetween: 340,
+                        },
+                        950: {
+                            slidesPerView: 3,
+                            spaceBetween: 300,
+                        },
+                        1040: {
+                            slidesPerView: 3,
+                            spaceBetween: 200,
+                        },
+                        1140: {
+                            slidesPerView: 3,
+                            spaceBetween: 100,
                         },
                         1200: {
-                            slidesPerView: 2,
-                            spaceBetween: 30,
+                            slidesPerView: 3,
+                            spaceBetween: 100,
                         },
                         1920: {
-                            slidesPerView: 2,
-                            spaceBetween: 30
+                            slidesPerView: 3,
+                            spaceBetween: 100
                         }
                     }}
                     loop={true}
-                    speed={6000}
-                    spaceBetween= {10}
-                    // centeredSlides={true}
+                    speed={4000}
                     autoplay={{
                         delay: 100,
                         disableOnInteraction: false,
@@ -60,42 +90,6 @@ const Slider = () => {
                     modules={[Autoplay, Navigation]}
                     className="mySwiper"
                 >
-                    <SwiperSlide>
-                        <Link to={`/catalog/${233}`}>
-                            <img className="slider__photo" alt="sliderPhoto"  src={photo233}/>
-                            <div className="slider__descr">Пирожное "Тирамису"</div>
-                        </Link>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Link to={`/catalog/${77}`}>
-                            <img className="slider__photo" alt="sliderPhoto"  src={photo77}/>
-                            <div className="slider__descr">Кольцо с творожной начинкой</div>
-                        </Link>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Link to={`/catalog/${62}`}>
-                            <img className="slider__photo" alt="sliderPhoto"  src={photo62}/>
-                            <div className="slider__descr">"Творожный с изюмом"</div>       
-                        </Link>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Link to={`/catalog/${73}`}>
-                            <img className="slider__photo" alt="sliderPhoto"  src={photo73}/>
-                            <div className="slider__descr">"Язык с сахаром"</div>
-                        </Link>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Link to={`/catalog/${300}`}>
-                            <img className="slider__photo" alt="sliderPhoto"  src={photo300}/>
-                            <div className="slider__descr">"Безе воздушное"</div>
-                        </Link>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Link to={`/catalog/${127}`}>
-                            <img className="slider__photo" alt="sliderPhoto"  src={photo127}/>
-                            <div className="slider__descr">"Рогалик с варёной сгущенкой"</div>
-                        </Link>
-                    </SwiperSlide>
                     <SwiperSlide>
                         <Link to={`/catalog/${233}`}>
                             <img className="slider__photo" alt="sliderPhoto"  src={photo233}/>
