@@ -49,13 +49,11 @@ const SingleProductPage = () => {
             {errorMessage}
             {spinner}
             {product.map(item => {
-                const {title, photoPath, proteins, fats, carbohydrates, energy, expiration, price, composition, _id, description, box_weight} = item;
+                const {title, photoPath, proteins, fats, carbohydrates, price, _id, description, box_weight} = item;
                 const tabs = [
-                    // { title: 'Срок годности', content: `При хранении в холодильнике: ${expiration} суток` },
-                    // { title: 'Состав', content: `${composition}` },
                     { title: 'Пищевая ценность', content: `На 100г: белки: ${proteins}, жиры: ${fats}, углеводы: ${carbohydrates}.`},
-                    { title: 'Вес коробки', content: `Вес продукции в коробке: ${box_weight} кг`}
-                    // { title: 'Энергетическая ценность', content: `${energy} ккал`},
+                    { title: 'Вес коробки', content: `Вес продукции в коробке: ${box_weight} кг`},
+                    { title: 'Цена за коробку', content: `Цена за 1 коробку: ${price * box_weight} рублей`}
                 ]
                 return (
                     <div key={_id} className="container">
@@ -69,14 +67,6 @@ const SingleProductPage = () => {
                                         <div className="single-info__expiration">
                                         {description}
                                         </div>
-                                        {/* <div className="single-info__weight">Масса нетто: <span></span></div> */}
-                                        {/* <div className="single-info__expiration">Срок годности:<span>{expiration} суток</span></div> */}
-                                        {/* <div className="single-info__nutritional">Энергетическая ценность: <span>{energy} ккал</span></div> */}
-                                        {/* <div className="single-info__proteins">Пищевая ценность в 100г: <span className="proteins"><br/>
-                                                                                                        белки:    {proteins}<br/>
-                                                                                                        жиры:    {fats}<br/>
-                                                                                                        углеводы:    {carbohydrates}</span></div> */}
-                                        {/* <div className="single-info__composition">Состав: <span>{composition}</span></div> */}
                                     </div>
                                 </div>
 
