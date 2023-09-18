@@ -29,7 +29,7 @@ const Slider = () => {
                     breakpoints={{
                         100: {
                             slidesPerView: 1, 
-                            spaceBetween: 160,
+                            spaceBetween: 40,
                         },
                         300: {
                             slidesPerView: 1, 
