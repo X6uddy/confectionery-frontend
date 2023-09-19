@@ -18,7 +18,7 @@ const ProductCard = ({product}) => {
 
     const [basketStatus, setBasket] = useState();
     const {basketItems} = useSelector(state => state.basketStates);
-    const {photoPath,productID,title, price, box_weight} = product;
+    const {photoPath,productID,title, price} = product;
     const dispatch = useDispatch();
     useEffect(() => {
         if(basketItems.find(item => item.productID === productID)){
@@ -27,7 +27,7 @@ const ProductCard = ({product}) => {
             setBasket(false)
         }
     },[basketItems,productID])
-    const productPrice = Math.round(price * box_weight)
+    const productPrice = Math.round(price)
     return(
         <>
             <div className="card__wrapper">
@@ -38,7 +38,7 @@ const ProductCard = ({product}) => {
                     <Link to={productID} className="card__describe_name">{title}</Link>
                 </div>
                 <div className="card__footer">
-                    <div className="card__footer_price">{productPrice} руб/кор.</div>
+                    <div className="card__footer_price">{productPrice} руб/кг</div>
                     <div className="card__footer_basket">
                         {basketStatus ? <img className="card__footer_basket-icon" alt="cardBasket" src={inBasket}/> : <img onClick={() => dispatch(addItem(product))} className="card__footer_basket-icon" alt="cardBasket" src={cardBasket}/>}
                         {basketStatus ?

@@ -103,6 +103,13 @@ const BasketPage = () => {
                 <div className="basketPage__describe">{totalQuantity} {typeOfWords(totalQuantity)} / {totalAmount} руб.</div>
                 <div className="basketPage-wrapper">
                     <div className="basketPage__mainContent">
+                        {(basketItems.length !== 0) ? 
+                        <div className="basketPage__mainContent_warning">
+                            <span>Внимание!</span>&nbsp;Цена указана за коробку.
+                        </div>
+                        :
+                        ''
+                        }
                         <div className="basketPage__mainContent_itemsList">
                             {(basketItems.length !== 0) ? basketItems.map((item) => (
                                     <BasketCard key={item.productID} basketItem={item} />
