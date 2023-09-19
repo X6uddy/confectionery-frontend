@@ -18,7 +18,7 @@ const ContactsPage = () => {
 
                     <div className="contacts-info">
                         <div className="contacts-info-block">
-                            <h3 className="contacts-info__subtitle">Режим работы:</h3>
+                            <h3 className="contacts-info__subtitle contacts-info__subtitle_shedule">Режим работы:</h3>
                             <div className="contacts-info_working">
                                 <div className="contacts-info_working-days">
                                     <p>Понедельник</p>

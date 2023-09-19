@@ -18,6 +18,11 @@
             &__title {
                 text-align: center;
             }
+            &__subtitle {
+                &_shedule {
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -28,7 +33,16 @@
         grid-template-columns: 1fr;
         grid-template-areas: 'a' 'c' 'b';
         &-info {
-            padding-left: 15px;
+            margin: 0 auto;
+        }
+        &-logo {
+            margin-top: 30px;
+            width: 100%;
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 250px;
+            }
         }
     }
 }
