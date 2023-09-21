@@ -16,9 +16,9 @@ const Holidays = () => {
                     {reasons.map((item, i) => {
                         return ((
                             <li className="holidays__item" key={i}>
-                                <div className="holidays__item-card">
-                                    <div className="holidays__item_front">{item.title}</div>
-                                    <div className="holidays__item_back">{item.content}</div>
+                                <div className="holidays__item__card">
+                                    <div className="holidays__item__card_front">{item.title}</div>
+                                    <div className="holidays__item__card_back">{item.content}</div>
                                 </div>
                             </li>
                         ))

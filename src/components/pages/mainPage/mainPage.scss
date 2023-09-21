@@ -9,41 +9,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &__img {
-        width: 100%;
-        img {
-            max-width: 100%;
-        }
-    }
-    &-wrapper {
-        width: 50%;
-    }
     &-block {
         display: flex;
         align-items: center;
-    }
-    &__title {
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-transform: uppercase;
-        text-align: center;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    &__descr {
-        text-align: center;
-        // font-family: Proxima Nova;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-    &__since {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-align: center;
+        &__img {
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+        &-wrapper {
+            width: 50%;
+        }
+        &__title {
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        &__descr {
+            text-align: center;
+            // font-family: Proxima Nova;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        &__since {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-align: center;
+        }
     }
 }
