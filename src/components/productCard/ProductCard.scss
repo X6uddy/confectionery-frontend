@@ -61,6 +61,9 @@
                 margin-left: 23px;
                 cursor: pointer;
             }
+            &-inBasket{
+                cursor: default;
+            }
             &-title {
                 cursor: pointer;
                 margin-left: 45px;
@@ -70,6 +73,7 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+                text-decoration: none;
             }
         }
     }

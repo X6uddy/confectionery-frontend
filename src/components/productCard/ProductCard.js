@@ -20,6 +20,7 @@ const ProductCard = ({product}) => {
     const {basketItems} = useSelector(state => state.basketStates);
     const {photoPath,productID,title, price} = product;
     const dispatch = useDispatch();
+    const[linkToBasket,setLink] = useState(false)
     useEffect(() => {
         if(basketItems.find(item => item.productID === productID)){
             setBasket(true)
@@ -40,9 +41,15 @@ const ProductCard = ({product}) => {
                 <div className="card__footer">
                     <div className="card__footer_price">{productPrice} руб/кг</div>
                     <div className="card__footer_basket">
-                        {basketStatus ? <img className="card__footer_basket-icon" alt="cardBasket" src={inBasket}/> : <img onClick={() => dispatch(addItem(product))} className="card__footer_basket-icon" alt="cardBasket" src={cardBasket}/>}
+                        {basketStatus ? <img className="card__footer_basket-icon card__footer_basket-inBasket" alt="cardBasket" src={inBasket}/> : <img onClick={() => dispatch(addItem(product))} className="card__footer_basket-icon" alt="cardBasket" src={cardBasket}/>}
                         {basketStatus ?
-                            <div className="card__footer_basket-title"> В корзине </div>
+                            <Link to='/basket' className="card__footer_basket-title" 
+                            onMouseOver={() => setLink(true)}
+                            onMouseOut={() => setLink(false)}
+                            style={{
+                                color: linkToBasket ? '#006800': '#000'
+                            }}
+                            > {linkToBasket ? 'В корзину': 'В корзине'} </Link>
                             :
                             <div onClick={() => dispatch(addItem(product))} className="card__footer_basket-title">В корзину</div>
                         }
