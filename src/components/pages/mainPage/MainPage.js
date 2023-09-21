@@ -16,13 +16,13 @@ const MainPage = () => {
             <div className="promo">
                 <div className="container">
                     <div className="promo-block">
-                        <div className="promo__img">
+                        <div className="promo-block__img">
                             <img src={promoImg} alt="promoImg" />
                         </div>
-                        <div className="promo__wrapper">
-                            <h1 className="promo__title">ИП Курушин А.О</h1>
-                            <p className="promo__since">— 2001 —</p>
-                            <p className="promo__descr">Откройте дверь в мир вкусовой гармонии, чтобы сделать каждый день незабываемым</p>
+                        <div className="promo-block-wrapper">
+                            <h1 className="promo-block__title">ИП Курушин А.О</h1>
+                            <p className="promo-block__since">— 2001 —</p>
+                            <p className="promo-block__descr">Откройте дверь в мир вкусовой гармонии, чтобы сделать каждый день незабываемым</p>
                         </div>
                     </div>
                 </div>

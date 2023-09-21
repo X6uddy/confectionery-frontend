@@ -7,19 +7,19 @@
     .promo {
         &-block {
             flex-direction: column-reverse;
-        }
-        &__descr {
-            font-size: 17px;
-        }
-        &__title {
-            font-size: 23px;
+            &__descr {
+                font-size: 17px;
+            }
+            &__title {
+                font-size: 23px;
+            }
         }
     }
 }
 
 @media ((max-width: 768px) and (min-width: 400px)) {
     .promo {
-        &__img {
+        &-block__img {
             width: 80%;
         }
     }
