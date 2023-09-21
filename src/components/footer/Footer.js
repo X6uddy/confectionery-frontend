@@ -41,9 +41,9 @@ function Footer() {
                     <div className="footer-block">
                         <div className="footer-list">
                             <h3 className="footer-list__heading">Каталог</h3>
-                            <a href='/catalog'>Печенька</a>
-                            <a href='/catalog'>Тортик</a>
-                            <a href='/catalog'>Еще че-то</a>
+                            <a href='/catalog'>Печенье</a>
+                            <a href='/catalog'>Торты</a>
+                            <a href='/catalog'>Кексы</a>
                         </div>
                     </div>
                 </div>
