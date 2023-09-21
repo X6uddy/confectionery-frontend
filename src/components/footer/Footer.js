@@ -1,8 +1,8 @@
 import React from 'react';
 
-import footer_1 from '../../resources/icons/footer/footer_1.svg';
-import footer_2 from '../../resources/icons/footer/footer_2.svg';
-import footer_3 from '../../resources/icons/footer/footer_3.svg';
+import footer_1 from '../../resources/icons/footer/footer_1.png';
+import footer_2 from '../../resources/icons/footer/footer_2.png';
+import footer_3 from '../../resources/icons/footer/footer_3.png';
 
 import './footer.scss';
 import './footer-media.scss';
