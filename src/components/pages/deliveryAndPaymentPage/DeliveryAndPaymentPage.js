@@ -1,6 +1,6 @@
 import React from 'react';
 
-import bicycle from '../../../resources/img/DeliveryAndPaymentPage/bicycle.png';
+import bicycle from '../../../resources/img/DeliveryAndPaymentPage/truck.svg';
 import logo from '../../../resources/img/DeliveryAndPaymentPage/logo_img.png';
 import YandexMapDelivery from './yandexMapDelivery';
 
@@ -13,46 +13,33 @@ const DeliveryAndPaymentPage = () => {
     return (
         <div className="delivery">
             <div className="container">
-                <div className="delivery-block">
-                    <div className="delivery-block_title">
-                        <h2 className="delivery-block__title">Доставка и оплата</h2>
-                        <p>Для наших покупателей доступны 2 способа доставки: <span>курьерская доставка</span> по Санкт-Петербургу в пределах КАД и <span>самовывоз</span>.</p>
-                    </div>
-                    {/* <div className="delivery-block_wrapper"> */}
-                        <div className="delivery-block_image"><img src={bicycle} alt="bicycle" /></div>
-                        <div className="delivery-block_descr">
-                            <h3 className="delivery-block__info">Курьерска доставка:</h3>
-                            <p> Курьеры работают каждый день с 11 до 21 часа. Доставка макарон осуществляется только по Санкт-Петербургу в пределах кольцевой автомобильной дороги (КАД). 
-                                <span> Точная зона доставки</span>. <br/><br/>
-                                Если Вы готовы принять заказ в интервале с 12 до 17 часов или с 17 до 21 часа, то доставка будет стоить 300 рублей. <br/><br/>
-                                При заказе от 3000 рублей доставка БЕСПЛАТНАЯ.<br/><br/>
-                                При оформлении заказа до 15 часов возможна доставка в тот же день в промежутке с 17 до 21 часа.<br/> <br/>
-                                Курьер предупредит Вас о своём прибытии за 30-40 минут.<br/>
+                <div className="delivery__block delivery__block_truck">
+                        <div className="delivery__block_truck-image"><img src={bicycle} alt="bicycle" /></div>
+                        <div className='delivery__block_text'>
+                            <div className="delivery__block_title">Доставка</div>
+                            <div className="delivery__block_descr">
+                                <p> 
+                                Мы ценим ваш интерес к нашим продуктам и стремимся обеспечить вас наилучшим обслуживанием.<br/><br/>
+                                При оформлении заказа важно учитывать количество товаров, которое вы планируете приобрести.
+                                Это связано с нашей политикой доставки, которая зависит от объема вашего заказа.<br />
+                                </p>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div className="delivery__block">
+                    <div className='delivery__block_text'>
+                        <div className="delivery__block_title">Самовывоз</div>
+                        <div className="delivery__block_descr">
+                            <p>
+                            Вы можете сделать заказ и забрать его самостоятельно с нашего производства по адресу: 20-й Инженерный проезд, 5.<br /><br />
+                            Забрать заказ можно на следующий день в пункте самовывоза в любое удобное время в промежутке с 8 до 17 часов.
                             </p>
                         </div>
-                    {/* </div> */}
-                </div>
-
-
-                <div className="delivery-block">
-                    <div className="delivery-block__descr">
-                        <h3 className="delivery-block__info">Самовывоз</h3>
-                        <p>
-                            Вы можете сделать заказ и забрать его самостоятельно с нашего производства по адресу: ул. Маршала Тухачевского 22 БЦ "Сова" <br/><br/>
-                            Заказ необходимо сделать до 20 часов, чтобы забрать его на следующий день в пункте самовывоза в любое удобное время в промежутке с 13 до 22 часов.<br/><br/>
-                            Оплатить заказ банковской картой можно заранее при оформлении. Непосредственно при получении банковской картой расплатиться нельзя.<br/><br/>
-                        </p>
-                        
-                        <h3 className="delivery-block__info">Оплата</h3>
-                        <p>
-                            Вы можете оплатить заказ при получении наличными или заранее оплатить заказ банковской картой. Для этого укажите выбранный способ при оформлении заказа. <br/><br/>
-                            Оплата банковской картой удобна, если вы хотите отправить десерты в подарок или не желаете возиться с наличными при получении заказа.<br/><br/>
-                            Если у Вас нет карты российского банка, мы можем принять оплату через платёжную систему PayPal.
-                        </p>
                     </div>
-                    <div className="delivery-block__image"><img src={logo} alt="logo" /></div>
+                    <div className="delivery__block_image"><img src={logo} alt="logo" /></div>
                 </div>
-
                 <YandexMapDelivery />
             </div>
         </div>

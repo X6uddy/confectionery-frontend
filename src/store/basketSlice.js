@@ -38,16 +38,16 @@ const basketSlice = createSlice({
             if(!existingItem) {
                 state.basketItems.push({
                     title: newItem.title,
-                    price: newItem.price,
+                    price: newItem.price * newItem.box_weight,
                     photoPath: newItem.photoPath,
                     productID: newItem.productID,
                     priceForOne: newItem.price,
                     quantity: 1,
-                    totalPrice: newItem.price, //price will increase depend on item quantity
+                    totalPrice: newItem.price * newItem.box_weight, //price will increase depend on item quantity
                 });
             }else{
                 existingItem.quantity++;
-                existingItem.totalPrice = Number(existingItem.quantity) * Number(newItem.price);
+                existingItem.totalPrice = Number(existingItem.quantity) * Number(existingItem.price);
             }
 
             state.totalQuantity = state.basketItems.reduce(
@@ -56,7 +56,7 @@ const basketSlice = createSlice({
               );
 
             state.totalAmount = state.basketItems.reduce(
-                (total, item) => total + Number(item.priceForOne) *  Number(item.quantity),
+                (total, item) => total + Number(item.price) *  Number(item.quantity),
                 0
             );
 
@@ -74,11 +74,11 @@ const basketSlice = createSlice({
 
            if(existingItem){
                 existingItem.quantity--;
-                existingItem.totalPrice = Number(existingItem.totalPrice) - Number(existingItem.priceForOne);
+                existingItem.totalPrice = Number(existingItem.totalPrice) - Number(existingItem.price);
            }
 
             state.totalAmount = state.basketItems.reduce(
-                (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
+                (total, item) => total + Number(item.price) * Number(item.quantity),
                 0
             );
 
@@ -103,7 +103,7 @@ const basketSlice = createSlice({
             }
             
             state.totalAmount = state.basketItems.reduce(
-                (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
+                (total, item) => total + Number(item.price) * Number(item.quantity),
                 0
             );
 
@@ -130,7 +130,7 @@ const basketSlice = createSlice({
 
 
             state.totalAmount = state.basketItems.reduce(
-                (total, item) => total + Number(item.priceForOne) * Number(item.quantity),
+                (total, item) => total + Number(item.price) * Number(item.quantity),
                 0
             );
 

@@ -29,6 +29,21 @@
         margin-bottom: 40px;
     }
     &__mainContent {
+        &_warning {
+            width: 100%;
+            border: 1px solid rgb(246,86,86);
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: rgba(246,86,86, 0.5);
+            color: #FFFFFF;
+            span {
+                text-transform: uppercase;
+            }
+        }
         &_makeOrder {
             max-width: 660px;
             margin: 0 auto;

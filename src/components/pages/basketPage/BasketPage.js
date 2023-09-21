@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
-import './BasketPage.scss';
-import './BasketPage-media.scss';
-import BasketCard from "../../basketCard/BasketCard";
 import { useDispatch, useSelector } from "react-redux";
-import basketIcon from '../../../resources/icons/basketCard/basketicon.svg'
 import { Link } from "react-router-dom";
+import InputMask from "react-input-mask";
+
 import { sendOrderByEmail, openBasketModal, openSuccessModal } from "../../../store/basketSlice";
 import BasketModal from "../../modals/basketModal/BasketModal";
 import OrderSuccessModal from "../../modals/orderSuccessModal/OrderSuccessModal";
-import InputMask from "react-input-mask";
+
+import './BasketPage.scss';
+import './BasketPage-media.scss';
+
+import BasketCard from "../../basketCard/BasketCard";
+import basketIcon from '../../../resources/icons/basketCard/basketicon.svg'
 
 const BasketPage = () => {
     const {basketItems, totalQuantity, totalAmount} = useSelector(state => state.basketStates);
@@ -100,6 +103,13 @@ const BasketPage = () => {
                 <div className="basketPage__describe">{totalQuantity} {typeOfWords(totalQuantity)} / {totalAmount} руб.</div>
                 <div className="basketPage-wrapper">
                     <div className="basketPage__mainContent">
+                        {(basketItems.length !== 0) ? 
+                        <div className="basketPage__mainContent_warning">
+                            <span>Внимание!</span>&nbsp;Цена указана за коробку.
+                        </div>
+                        :
+                        ''
+                        }
                         <div className="basketPage__mainContent_itemsList">
                             {(basketItems.length !== 0) ? basketItems.map((item) => (
                                     <BasketCard key={item.productID} basketItem={item} />

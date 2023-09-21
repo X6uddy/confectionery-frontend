@@ -36,9 +36,9 @@ const Menu = () => {
                             </NavLink>
                         </li>
                         <li className='menu__nav-item' onClick={() => dispatch(closeMenu())}>
-                            <NavLink to="/wholesale" className={({isActive}) => isActive? 'menu__nav_link activeLinkMenu':'menu__nav_link'}>
+                            <NavLink to="/contacts" className={({isActive}) => isActive? 'menu__nav_link activeLinkMenu':'menu__nav_link'}>
                                     <img className='menu__nav_muffin' alt='muffinicon' src={muffinIcon} />
-                                    <div className='menu__nav-ref'>оптовые поставки</div>
+                                    <div className='menu__nav-ref'>Контакты</div>
                             </NavLink>
                         </li>
                         <li className='menu__nav-item' onClick={() => dispatch(closeMenu())}>

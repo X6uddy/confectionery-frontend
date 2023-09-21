@@ -26,9 +26,12 @@ const VacancyPage = () => {
                     { error ? <img alt="error503" style={{width: '100%'}} src={error503} /> : ''}
                     { isLoading ? <Spinner />: ''}
                     {vacancies.map((item) => {
-                        return (
-                            <VacancyCard key={item._id} vacancyData={item} />
-                        )
+                            return (
+                                item.isActive ?
+                                <VacancyCard key={item._id} vacancyData={item} />
+                                :
+                                ''
+                            )
                     })}
                 </div>
             </div>

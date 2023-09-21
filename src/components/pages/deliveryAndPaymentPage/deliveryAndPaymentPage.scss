@@ -1,51 +1,48 @@
 .delivery {
     background-color: #F7F7F7;
     padding: 30px 10px;
-    &-block {
-        display: grid;
-        grid-template: 1fr / 1fr 1fr;
-        grid-template-areas:
-            '. a'
-            'b c';
-        padding: 75px 0 65px 0;
-        &_title {
-            grid-area: a;
-            span {
-                font-weight: 600;
+    &__block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 300px;
+        margin-bottom: 50px;
+        &_image {
+            img {
+                width: 300px;
             }
         }
-        &_image {
-            grid-area: b;
-            text-align: center;
+        &_truck {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            height: 300px;
+          
         }
+        &_text {
+            width: 50%;
+        }
+        &_title {
+            font-size: 22px;
+            font-family: Montserrat;
+            font-weight: 600;
+        }
+        
         &_descr {
-            grid-area: c;
             p {
-                font-size: 16px;
+                font-size: 19px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 130%;
+                margin-top: 30px;
+                
             }
             span {
                 color: #E7426A;
                 font-weight: 600;
                 text-decoration: underline;
             }
-        }
-        &__title {
-            font-size: 42px;
-            margin: 0;
-        }
-        &__info {
-            margin: 0;
-            font-size: 18px;
-        }
-        &__image {
-            text-align: center;
-            align-items: center;
-        }
-        &__descr {
-            padding: 0 10px;
         }
     }
     &__map{

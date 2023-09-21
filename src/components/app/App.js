@@ -1,11 +1,10 @@
 import { lazy} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-
+import Dashboard from '../dashboard/Dashboard';
 
 
 const Page404 = lazy(() => import('../pages/404'));
 const MainPage = lazy(() => import('../pages/mainPage/MainPage'));
-const Dashboard = lazy(() => import('../dashboard/Dashboard'));
 const VacancyPage = lazy(() => import('../pages/vacancyPage/VacancyPage'));
 const ContactsPage = lazy(() => import('../pages/contactsPage/ContactsPage'));
 const DeliveryAndPaymentPage = lazy(() => import('../pages/deliveryAndPaymentPage/DeliveryAndPaymentPage'));
@@ -22,16 +21,16 @@ const App = () => {
         <Router>
                 <Routes>
                     <Route path='/' element={<Dashboard />}>
-                        <Route index element={<MainPage/>}/>
-                        <Route path="vacancy" element={<VacancyPage />} />
-                        <Route path="vacancy/:id" element={<VacancyInfoPage />} />
-                        <Route path="contacts" element={<ContactsPage />} />
-                        <Route path="deliveryAndPayment" element={<DeliveryAndPaymentPage />} />
-                        <Route path="catalog" element={<CatalogPage />} />
-                        <Route path="catalog/:productId" element={<SingleProductPage />} />
-                        <Route path="basket" element={<BasketPage />} />
-                        <Route path="privacypolicy" element={<PrivacyPolicyPage />} />
-                        <Route path="*" element={<Page404/>} />
+                    <Route index element={<MainPage/>}/>
+                    <Route path="vacancy" element={<VacancyPage />} />
+                    <Route path="vacancy/:id" element={<VacancyInfoPage />} />
+                    <Route path="contacts" element={<ContactsPage />} />
+                    <Route path="deliveryAndPayment" element={<DeliveryAndPaymentPage />} />
+                    <Route path="catalog" element={<CatalogPage />} />
+                    <Route path="catalog/:productId" element={<SingleProductPage />} />
+                    <Route path="basket" element={<BasketPage />} />
+                    <Route path="privacypolicy" element={<PrivacyPolicyPage />} />
+                    <Route path="*" element={<Page404/>} />
                     </Route>
                 </Routes>
         </Router>

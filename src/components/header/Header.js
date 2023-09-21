@@ -41,7 +41,7 @@ function Header() {
                                 <a href="tel: +78889993344" className="header__top_phoneIcon">
                                     <img className='header__top_phoneIcon' src={phoneIcon} alt='phoneIcon'/>
                                 </a>
-                                <a href="tel: +78889993344" className="header__top_tag">8 888 999-33-44</a>
+                                <a href="tel: +79050366380" className="header__top_tag">8 905 036-63-80</a>
                             </div>
                             <div className="header__top_elem">
                                 <Link to='/basket' className="header__top_basketIcon">

@@ -10,7 +10,7 @@ import ErrorMessage from '../../errorMessage/ErrorMessage'
 import './SingleProductPage.scss';
 import './singleProductPage-media.scss';
 
-import basketPhoto from '../../../resources/icons/productCard/cardBasket_white.png';
+import basketPhoto from '../../../resources/icons/productCard/cardbasket_white.svg';
 import inBasket from '../../../resources/icons/productCard/tip-white.png';
 import tabDown from '../../../resources/icons/singleProduct/tab-down.png';
 import priceWarning from '../../../resources/icons/singleProduct/priceWarning_white.png';
