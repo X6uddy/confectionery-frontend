@@ -5,7 +5,6 @@ import logo from '../../../resources/img/contacts/logo_img.png';
 import './contactsPage.scss';
 import './contactPage-media.scss';
 
-//probl
 const ContactsPage = () => {
     return (
         <div className="contact">
