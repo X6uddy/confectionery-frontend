@@ -1,6 +1,7 @@
 import { lazy} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Dashboard from '../dashboard/Dashboard';
+import ScrollToTop from '../../scrollToTop/ScrollToTop';
 
 
 const Page404 = lazy(() => import('../pages/404'));
@@ -19,6 +20,7 @@ const VacancyInfoPage = lazy(() => import('../pages/vacancyInfoPage/VacancyInfoP
 const App = () => {
     return(
         <Router>
+            <ScrollToTop />
                 <Routes>
                     <Route path='/' element={<Dashboard />}>
                     <Route index element={<MainPage/>}/>
