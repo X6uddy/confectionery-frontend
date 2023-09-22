@@ -6,6 +6,7 @@ import footer_3 from '../../resources/icons/footer/footer_3.png';
 
 import './footer.scss';
 import './footer-media.scss';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -16,9 +17,9 @@ function Footer() {
                     <div className="footer-block">
                         <div className="footer-block__list">
                             <h3 className="footer-block__list__heading">Информация</h3>
-                            <a href='#root'>О компании</a>
-                            <a href='#sds'>Политика</a>
-                            <a href='/contacts'>Контакты</a>
+                            <Link to="contacts">Контакты</Link>
+                            <Link to="deliveryAndPayment">Доставка и оплата</Link>
+                            <Link to="privacypolicy">Политика конфиденциальности</Link>
                         </div>
                     </div>
 
@@ -40,10 +41,11 @@ function Footer() {
 
                     <div className="footer-block">
                         <div className="footer-block__list">
-                            <h3 className="footer-list__heading">Каталог</h3>
-                            <a href='/catalog'>Печенье</a>
-                            <a href='/catalog'>Торты</a>
-                            <a href='/catalog'>Кексы</a>
+                            <h3 className="footer-list__heading">Разделы</h3>
+                            <a href="#header">Главная</a>
+                            <Link to="catalog">Каталог</Link>
+                            <Link to="vacancy">Вакансии</Link>
+                            <Link to="basket">Корзина</Link>
                         </div>
                     </div>
                 </div>
