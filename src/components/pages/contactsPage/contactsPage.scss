@@ -30,6 +30,19 @@
                 color: black;
                 text-decoration: none;
             }
+            &_img {
+                &-email {
+                    margin-right: 5px;
+                }
+            }
+            &_links{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 153px;
+                margin-bottom: 7px;
+            }
+            
         }
         &__subtitle {
             margin-bottom: 7px;

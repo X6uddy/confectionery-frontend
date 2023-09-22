@@ -1,7 +1,8 @@
 import React from "react";
 
 import logo from '../../../resources/img/contacts/logo_img.png';
-
+import phone from '../../../resources/icons/contactsPage/phone.svg';
+import emailIcon from '../../../resources/icons/contactsPage/email.svg';
 import './contactsPage.scss';
 import './contactPage-media.scss';
 
@@ -46,8 +47,15 @@ const ContactsPage = () => {
                         </div>
 
                         <div className="contacts-info-block">
-                            <h3 className="contacts-info__subtitle">Телефон:</h3>
-                            <p className="contacts-info__descr"><a href="tel:+79050366380">+7 (905) 036-63-80</a></p>
+                            <h3 className="contacts-info__subtitle">Связь:</h3>
+                            <p className="contacts-info__descr contacts-info__descr_links">
+                                <img className="contacts-info__descr_img-phone" src={phone} alt="phone" />
+                                <a href="tel:+79050366380">+7 (905) 036-63-80</a>
+                            </p>
+                            <p className="contacts-info__descr contacts-info__descr_links">
+                                <img className="contacts-info__descr_img-email" src={emailIcon} alt="phone" />
+                                <a href="mailto:pochta@gmail.com">pochta@gmail.com</a>
+                            </p>
                         </div>
                     </div>
                 </div>
