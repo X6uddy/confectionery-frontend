@@ -100,7 +100,15 @@
         &_block {
             position: relative;
             margin-bottom: 10px;
-            div {
+            &-connectItem {
+                color: #000000;
+                font-family: PTSans-Regular;
+                font-size: 17px;
+                font-weight: 500;
+                margin-left: 30px;
+                text-decoration: none;
+            }
+            a {
                 color: #000000;
                 font-family: PTSans-Regular;
                 font-size: 17px;

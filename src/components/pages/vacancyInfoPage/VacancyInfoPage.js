@@ -79,11 +79,11 @@ const VacancyInfoPage = () => {
                     <div className="vacancyInfo__contacts-wrapper">
                         <div className="vacancyInfo__contacts_block">
                             <img src={phone} alt="phone number" />
-                            <div>8 (905) 036-63-80</div>
+                            <div className='vacancyInfo__contacts_block-connectItem'>8 (905) 036-63-80</div>
                         </div>
                         <div className="vacancyInfo__contacts_block">
                             <img src={emailIcon} alt="email" />
-                            <div>pochta@gmail.com</div>
+                            <a className='vacancyInfo__contacts_block-connectItem' href="mailto:kurushinanelli@mail.ru">kurushinanelli@mail.ru</a>
                         </div>
                     </div>
                 </div>

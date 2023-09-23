@@ -54,7 +54,7 @@ const ContactsPage = () => {
                             </p>
                             <p className="contacts-info__descr contacts-info__descr_links">
                                 <img className="contacts-info__descr_img-email" src={emailIcon} alt="phone" />
-                                <a href="mailto:pochta@gmail.com">pochta@gmail.com</a>
+                                <a href="mailto:kurushinanelli@mail.ru">kurushinanelli@mail.ru</a>
                             </p>
                         </div>
                     </div>
