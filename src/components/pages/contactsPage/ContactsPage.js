@@ -11,9 +11,9 @@ import './contactPage-media.scss';
 const ContactsPage = () => {
     return (
         <div className="contact">
-            <div className="container">
+            <div className="container"> 
                 <div className="contacts">
-                    <h1 className="contacts-info__title">Контакты</h1>
+                    <h2 className="contacts-info__title">Контакты</h2>
                     <div className="contacts-logo">
                         <img src={logo} alt="logo"/>
                     </div>
@@ -49,7 +49,7 @@ const ContactsPage = () => {
                         </div>
 
                         <div className="contacts-info-block">
-                            <h3 className="contacts-info__subtitle">Связь:</h3>
+                            <h3 className="contacts-info__subtitle">Связаться:</h3>
                             <p className="contacts-info__descr contacts-info__descr_links">
                                 <img className="contacts-info__descr_img contacts-info__descr_img-phone" src={phone} alt="phone" />
                                 <a href="tel:+79050366380">+7 (905) 036-63-80</a>

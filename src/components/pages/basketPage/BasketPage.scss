@@ -20,13 +20,55 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
         opacity: 0.7;
     }
     &-wrapper{
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
+    }
+    &__connectInstructions {
+        font-family: PTSans-Regular;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+        span  {
+            color: #7360F2;
+        }
+        &_btns {
+            display: flex;
+            justify-content: space-between;
+            max-width: 400px;
+            margin: 0 auto;
+            &-modal {
+                max-width: 330px;
+            }
+        }
+        &_btn {
+            width: 190px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background-color: $main-color;
+            border-radius: 3px;
+            color: #FFFFFF;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            &-viber {
+                background-color: #7360F2;
+            }
+            &-modal {
+                width: 150px;
+            }
+        }
     }
     &__mainContent {
         &_warning {
@@ -145,6 +187,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            &_onlyCalls {
+                display: block;
+                width: 100%;
+            }
         }
     }
     &__infoWindow{

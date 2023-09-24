@@ -23,9 +23,16 @@
         &__infoWindow {
             width: 300px;
         }
+        &__connectInstructions {
+            &_btn-modal{
+                width: 120px;
+                height: 40px;
+                font-size: 12px;
+            }
+        }
         &__btn{
             &-wrapper {
-                padding: 15px 20px;
+                padding: 15px 15px;
             }
             &_infoBtn{
                 width: 210px;
@@ -66,6 +73,9 @@
             &_forPay {
                 margin-right: 10px;
             }
+        }
+        &__btn-wrapper_onlyCalls {
+            max-width: 290px;
         }
     }
 }
@@ -121,10 +131,39 @@
                 }
             }
         }
+        
+    }
+}
+@media (max-width: 435px) {
+    .basketPage {
+        &__infoWindow {
+            height: 100px;
+            &-bottom {
+                align-self: flex-start;
+            }
+        }
+        &__btn-wrapper_onlyCalls {
+            max-width: 190px;
+            display: flex;
+        }
+        &__connectInstructions {
+            &_btn {
+                width: 170px;
+            }
+            &_btns-modal {
+                flex-direction: column;
+                height: 85px;
+                justify-content: space-between;
+            } 
+        }
     }
 }
 @media (max-width: 378px) {
     .basketPage {   
+        &__btn-wrapper_onlyCalls {
+            max-width: 170px;
+            display: flex;
+        }
         &__mainContent {
             &_itemsList {
                 max-width: 300px;
@@ -139,6 +178,14 @@
                         height: 200px;
                     }
                 }
+            }
+        }
+        &__connectInstructions {
+            &_btns{
+                justify-content: space-around;
+            }
+            &_btn {
+                width: 145px;
             }
         }
         &__btn{
