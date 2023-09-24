@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 
 
 
-// import BasketModal from "../../modals/basketModal/BasketModal";
-// import OrderSuccessModal from "../../modals/orderSuccessModal/OrderSuccessModal";
+    // import BasketModal from "../../modals/basketModal/BasketModal";
+    // import OrderSuccessModal from "../../modals/orderSuccessModal/OrderSuccessModal";
 
 import './BasketPage.scss';
 import './BasketPage-media.scss';
