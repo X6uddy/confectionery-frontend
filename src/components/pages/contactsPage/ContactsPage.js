@@ -3,6 +3,8 @@ import React from "react";
 import logo from '../../../resources/img/contacts/logo_img.png';
 import phone from '../../../resources/icons/contactsPage/phone.svg';
 import emailIcon from '../../../resources/icons/contactsPage/email.svg';
+import viber from '../../../resources/icons/contactsPage/viber.svg';
+
 import './contactsPage.scss';
 import './contactPage-media.scss';
 
@@ -49,11 +51,15 @@ const ContactsPage = () => {
                         <div className="contacts-info-block">
                             <h3 className="contacts-info__subtitle">Связь:</h3>
                             <p className="contacts-info__descr contacts-info__descr_links">
-                                <img className="contacts-info__descr_img-phone" src={phone} alt="phone" />
+                                <img className="contacts-info__descr_img contacts-info__descr_img-phone" src={phone} alt="phone" />
                                 <a href="tel:+79050366380">+7 (905) 036-63-80</a>
                             </p>
                             <p className="contacts-info__descr contacts-info__descr_links">
-                                <img className="contacts-info__descr_img-email" src={emailIcon} alt="phone" />
+                                <img className="contacts-info__descr_img contacts-info__descr_img-viber" src={viber} alt="phone" />
+                                <a href="viber://chat?number=%2B79050366380">+7 (905) 036-63-80</a>
+                            </p>
+                            <p className="contacts-info__descr_img contacts-info__descr contacts-info__descr_links">
+                                <img className="contacts-info__descr_img contacts-info__descr_img-email" src={emailIcon} alt="phone" />
                                 <a href="mailto:kurushinanelli@mail.ru">kurushinanelli@mail.ru</a>
                             </p>
                         </div>

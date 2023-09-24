@@ -29,18 +29,28 @@
             a {        
                 color: black;
                 text-decoration: none;
+                margin-left: 30px;
             }
             &_img {
-                &-email {
-                    margin-right: 5px;
+                position: absolute;
+                &-viber {
+                    width: 25px;
+                    height: 25px;
+                    top: -3px;
                 }
+                &-email {
+                    left: 3px;
+                }
+                &-phone {
+                    left: 2px;
+                    top: 1px;
+                }
+
             }
             &_links{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                max-width: 153px;
-                margin-bottom: 7px;
+                position: relative;
+                max-width: 163px;
+                margin-bottom: 13px;
             }
             
         }
