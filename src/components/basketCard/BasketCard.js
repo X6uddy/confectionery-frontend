@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 
 const BasketCard = ({basketItem}) => {
 
+
+
     const dispatch = useDispatch();
     const [quantityValue,setValue] = useState('');
     const {productID, totalPrice, quantity, title, photoPath} = basketItem;
@@ -44,7 +46,7 @@ const BasketCard = ({basketItem}) => {
     return (
         <div className="basketCard">
             <img src={removeIcon} alt="remove icon" className="basketCard__remove" onClick={() => dispatch(deleteItem(productID))}/>
-            <Link to={`/catalog/${productID}`} className="basketCard__img"><img src={`http://127.0.0.1:3004${photoPath}`} alt="product" className="basketCard__img" /></Link>
+            <Link to={`/catalog/${productID}`} className="basketCard__img"><img src={`${photoPath}`} alt="product" className="basketCard__img" /></Link>
             <div className="basketCard__infoBlock">
             <Link to={`/catalog/${productID}`} className="basketCard__infoBlock_title">{title}</Link>
                 <div className="basketCard__infoBlock-wrapper">

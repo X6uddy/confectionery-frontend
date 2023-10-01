@@ -6,6 +6,7 @@
 @media (max-width: 768px) {
     .promo {
         &-block {
+            padding-top: 30px;
             flex-direction: column-reverse;
             &__descr {
                 font-size: 17px;

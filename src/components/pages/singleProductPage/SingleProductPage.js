@@ -19,6 +19,8 @@ import priceWarning from '../../../resources/icons/singleProduct/priceWarning_wh
 
 const SingleProductPage = () => {
 
+
+
     const dispatch = useDispatch();
     const {basketItems} = useSelector(state => state.basketStates);
     const {productId} = useParams();
@@ -69,7 +71,7 @@ const SingleProductPage = () => {
                     return (
                         <div key={_id} className="container">
                             <div className="single-product">
-                                <img src={`http://127.0.0.1:3004${photoPath}`} alt={title} className="single-product__image" />
+                                <img src={`${photoPath}`} alt={title} className="single-product__image" />
                                 <div className="single-info">
 
                                     <div>

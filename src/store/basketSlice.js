@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const backendApi = process.env.REACT_APP_API_URL;
+
+
 const items =
   localStorage.getItem("basketItems") !== null
     ? JSON.parse(localStorage.getItem("basketItems"))
@@ -155,7 +158,7 @@ const basketSlice = createSlice({
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ buyersName,buyersComment,buyersNumber, order: state.basketItems, orderPrice: state.totalAmount})
             };
-            fetch('http://127.0.0.1:3004/mail/sendOrder', requestOptions)
+            fetch(`${backendApi}/mail/sendOrder`, requestOptions)
             .catch(err => console.log(err));
 
             state.basketItems = [];

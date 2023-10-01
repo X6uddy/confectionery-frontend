@@ -1,12 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+const backendApi = process.env.REACT_APP_API_URL;
 
 export const fetchProducts = createAsyncThunk(
     'catalogState/fetchProducts',
     async function(skip = 0,{rejectWithValue}) {
 
         try {
-            const response = await fetch(`http://127.0.0.1:3004/products/catalog?skip=${skip}`);
+            const response = await fetch(`${backendApi}/products/catalog?skip=${skip}`);
 
             if(!response.ok ){
                 throw new Error('Server is broken')
@@ -25,7 +26,7 @@ export const fetchSumProducts = createAsyncThunk(
     async function(_,{rejectWithValue}) {
 
         try {
-            const responseSum = await fetch(`http://127.0.0.1:3004/products/sum`);
+            const responseSum = await fetch(`${backendApi}/products/sum`);
             if(!responseSum.ok ){
                 throw new Error('Server is broken')
             }

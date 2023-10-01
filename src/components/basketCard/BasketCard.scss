@@ -43,6 +43,7 @@
         &_amount {
             display: flex;
             min-width: 75px;
+            align-items: flex-end;
             justify-content: space-between;
             position: absolute;
             left: 50%;

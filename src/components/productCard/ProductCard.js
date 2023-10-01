@@ -16,6 +16,7 @@ import cardBasket from '../../resources/icons/productCard/cardbasket.svg';
 
 const ProductCard = ({product}) => {
 
+
     const [basketStatus, setBasket] = useState();
     const {basketItems} = useSelector(state => state.basketStates);
     const {photoPath,productID,title, price} = product;
@@ -33,7 +34,7 @@ const ProductCard = ({product}) => {
         <>
             <div className="card__wrapper">
                 <Link to={productID}>
-                    <img src={`http://127.0.0.1:3004${photoPath}`} alt={`img number-${productID}`} className="card__img" />
+                    <img src={`${photoPath}`} alt={`img number-${productID}`} className="card__img" />
                 </Link>
                 <div className="card__describe">
                     <Link to={productID} className="card__describe_name">{title}</Link>

@@ -4,10 +4,6 @@ import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 
 
-
-    // import BasketModal from "../../modals/basketModal/BasketModal";
-    // import OrderSuccessModal from "../../modals/orderSuccessModal/OrderSuccessModal";
-
 import BasketCard from "../../basketCard/BasketCard";
 import basketIcon from '../../../resources/icons/basketCard/basketicon.svg'
 
@@ -25,7 +21,7 @@ const BasketPage = () => {
         const offerScroll = () =>{
             const offerBlock =  document.querySelector('.basketPage__mainContent_makeOrder');
             const offerBlockPosition = offerBlock.getBoundingClientRect();
-            if(offerBlockPosition.top <= 230 && window.outerWidth <= 869){
+            if(offerBlockPosition.top <= 400 && window.outerWidth <= 869){
                 setOfferBtn(true)
             }else{
                 setOfferBtn(false)
@@ -125,8 +121,7 @@ const BasketPage = () => {
                                 </div>
                         </div>
                 </div>
-                {/* <BasketModal />
-                <OrderSuccessModal /> */}
+                
             </div>
         </>
     )

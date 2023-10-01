@@ -37,7 +37,7 @@ const VacancyInfoPage = () => {
                     {vacancyInfo.map((infoItem) => {
                         
                         const {title, requirements, duties, conditions, salary, description, _id} = infoItem;
-
+                        
                         return (
                             <div key={_id}>
                                 <div className="vacancyInfo__card">
@@ -87,7 +87,7 @@ const VacancyInfoPage = () => {
                         <div className="vacancyInfo__contacts-wrapper">
                             <div className="vacancyInfo__contacts_block">
                                 <img src={phone} alt="phone number" />
-                                <div className='vacancyInfo__contacts_block-connectItem'>8 (905) 036-63-80</div>
+                                <a href="tel:+79050366380" className='vacancyInfo__contacts_block-connectItem'>+7 (905) 036-63-80</a>
                             </div>
                             <div className="vacancyInfo__contacts_block">
                                 <img src={emailIcon} alt="email" />
